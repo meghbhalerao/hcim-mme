@@ -76,8 +76,8 @@ class Predictor_deep_attributes(nn.Module):
     def __init__(self, num_class=64, inc=4096, temp=0.05, feat_dim = 300):
         super(Predictor_deep_attributes, self).__init__()
         self.fc1 = nn.Linear(inc, 512)
-        self.fc2 = nn.Linear(512, feat_dim, bias=False)
-        self.fc3 = nn.Linear(feat_dim,num_class)
+        self.fc2 = nn.Linear(512, feat_dim)
+        self.fc3 = nn.Linear(feat_dim,num_class, bias = False)
         self.num_class = num_class
         self.temp = temp
 
@@ -140,7 +140,7 @@ class Predictor_attributes(nn.Module):
     def __init__(self, num_class=64, inc=4096, temp=0.05, feat_dim = 300):
         super(Predictor_attributes, self).__init__()
         self.fc1 = nn.Linear(inc, feat_dim)
-        self.fc2 = nn.Linear(feat_dim,num_class)
+        self.fc2 = nn.Linear(feat_dim,num_class, bias = False)
         self.num_class = num_class
         self.temp = temp
 
