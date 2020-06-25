@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import re
+import os
 
 # class list dirty strings
 class_list = "lists/multi-class-list.txt"
@@ -20,4 +21,14 @@ for item in my_file:
 
 del[class_list[len(class_list)-1]]
 
-print(class_list)
+# roor dir of the target examples
+root = "../data/multi/sketch/"
+class_num_list = []
+
+for class_ in class_list:
+    class_dir = root + class_
+    length = len(os.listdir(class_dir))
+    class_num_list.append(length)
+
+print(class_num_list)
+
