@@ -1,7 +1,7 @@
 ######START OF EMBEDDED SGE COMMANDS ##########################
 #$ -S /bin/bash
 #$ -cwd
-#$ -N cbfl_glove50
+#$ -N cbfl_gl50
 #$ -M 16ee234.megh@nitk.edu.in #### email to nofity with following options/scenarios
 #$ -m a #### send mail in case the job is aborted
 #$ -m b #### send mail when job begins

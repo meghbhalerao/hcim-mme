@@ -1,7 +1,7 @@
 ######START OF EMBEDDED SGE COMMANDS ##########################
 #$ -S /bin/bash
 #$ -cwd
-#$ -N cbfl_glove50
+#$ -N ce_vgg
 #$ -M 16ee234.megh@nitk.edu.in #### email to nofity with following options/scenarios
 #$ -m a #### send mail in case the job is aborted
 #$ -m b #### send mail when job begins
@@ -18,4 +18,4 @@ module load python/anaconda/3
 module unload gcc
 module load gcc/5.2.0
 cd ..
-python main.py --method MME --dataset multi --source real --target sketch --net alexnet --attribute glove_anurag --dim 50 --loss CBFL --patience 10 --save_check
+python main.py --method MME --dataset multi --source real --target sketch --net vgg --loss CE --patience 10 #--save_check
