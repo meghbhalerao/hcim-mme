@@ -30,5 +30,8 @@ for class_ in class_list:
     length = len(os.listdir(class_dir))
     class_num_list.append(length)
 
-print(class_num_list)
+
+f = open("file.txt", "w")
+for val in class_num_list:
+    f.write(str(val) + '\n')
 
