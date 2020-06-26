@@ -22,7 +22,7 @@ for item in my_file:
 del[class_list[len(class_list)-1]]
 
 f = open("classes.txt", "w")
-for val in classl_ist:
+for val in class_list:
     f.write(str(val) + '\n')
 
 # roor dir of the target examples
