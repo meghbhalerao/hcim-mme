@@ -21,8 +21,12 @@ for item in my_file:
 
 del[class_list[len(class_list)-1]]
 
+f = open("classes.txt", "w")
+for val in classl_ist:
+    f.write(str(val) + '\n')
+
 # roor dir of the target examples
-root = "../data/multi/sketch/"
+root = "../data/multi/real/"
 class_num_list = []
 
 for class_ in class_list:
@@ -31,7 +35,7 @@ for class_ in class_list:
     class_num_list.append(length)
 
 
-f = open("file.txt", "w")
+f = open("real_class_num_list.txt", "w")
 for val in class_num_list:
     f.write(str(val) + '\n')
 
