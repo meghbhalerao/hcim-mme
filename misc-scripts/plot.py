@@ -22,5 +22,9 @@ for item in f_act:
     if item != '':
         class_num_pred.append(int(item))
 
-plt.scatter(class_num_actual,class_num_pred)
+plt.plot(class_num_pred, label = "predicted distribution by class of target examples")
+plt.plot(class_num_actual, label = "actual distribution by class of target examples")
+plt.legend()
+plt.savefig("class_distribution.png")
 plt.show()
+
