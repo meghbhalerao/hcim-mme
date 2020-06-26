@@ -4,34 +4,23 @@ import re
 import os
 
 # class list dirty strings
-class_list = "lists/multi-class-list.txt"
+class_num_actual = "sketch_num_actual_pc.txt"
+class_num_pred = "sketch_num_pred_pc.txt"
+# Making the list of classes
+f_act = open(class_num_actual)
+f_act = f_act.read().split("\n")
+class_num_actual = []
+for item in f_act:
+    if item != '':
+        class_num_actual.append(int(item))
 
 # Making the list of classes
-f = open(class_list)
-my_file = f.read().split("\n")
-f.close()
-class_list = []
+f_act = open(class_num_pred)
+f_act = f_act.read().split("\n")
+class_num_pred = []
+for item in f_act:
+    if item != '':
+        class_num_pred.append(int(item))
 
-for item in my_file:
-    item = str(item)
-    m = re.search('/(.+?)/',item)
-    if m:
-        found = m.group(1)
-    class_list.append(found)
-
-del[class_list[len(class_list)-1]]
-
-# roor dir of the target examples
-root = "../data/multi/sketch/"
-class_num_list = []
-
-for class_ in class_list:
-    class_dir = root + class_
-    length = len(os.listdir(class_dir))
-    class_num_list.append(length)
-
-
-f = open("file.txt", "w")
-for val in class_num_list:
-    f.write(str(val) + '\n')
-
+plt.scatter(class_num_actual,class_num_pred)
+plt.show()
