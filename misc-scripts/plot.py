@@ -32,6 +32,9 @@ class_num_pred = class_num_pred[arr1inds[::-1]]
 class_num_actual = np.flip(class_num_actual)
 class_num_pred = np.flip(class_num_pred)
 
+print(sum(class_num_actual))
+print(sum(class_num_pred))
+
 plt.plot(class_num_pred, label = "predicted distribution by class of target examples")
 plt.plot(class_num_actual, label = "actual distribution by class of target examples")
 plt.legend()
