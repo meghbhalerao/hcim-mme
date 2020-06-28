@@ -29,7 +29,7 @@ class_num_pred = np.array(class_num_pred)
 
 
 # sorting both the arrays accoring to the actual number of exmaples per class
-print(abs(np.sum(class_num_pred-class_num_actual))/sum(class_num_actual))
+print(np.sum(abs(class_num_pred-class_num_actual))/sum(class_num_pred))
 arr1inds = class_num_actual.argsort()
 class_num_actual = class_num_actual[arr1inds]
 class_num_pred = class_num_pred[arr1inds]
