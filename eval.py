@@ -132,53 +132,16 @@ def main():
         else:
             F1 = Predictor(num_class=len(class_list), inc=inc, temp=args.T)
             print("Using: Predictor")
+    
+    G = torch.load("save_model_ssda/G_iter_model_MME_real_to_sketch_step_2000.pth.tar")
+    F1 = torch.load("save_model_ssda/F1_iter_model_MME_real_to_sketch_step_3500.pth.tar")
+
+    print(G)
+    print(F)
 
 
-            
-    # Initializing the weights of the prediction layer
-    weights_init(F1)
-	# Setting the prediction layer weights as the semantic attributes
-    if args.attribute is not None:
-        att = np.load('attributes/%s_%s.npy'%(args.dataset,args.attribute))    
-        if use_gpu:
-            att = nn.Parameter(torch.cuda.FloatTensor(att))
-        else:
-            att = nn.Parameter(torch.FloatTensor(att,device = "cpu"))
-        if args.deep:
-            F1.fc3.weight = att
-        else:
-            F1.fc2.weight = att
-        print("attribute shape is: ", att.shape)
-
-    lr = args.lr
     G.to(device)
     F1.to(device)
-
-   
-    im_data_s = torch.FloatTensor(1)
-    im_data_t = torch.FloatTensor(1)
-    im_data_tu = torch.FloatTensor(1)
-    gt_labels_t = torch.LongTensor(1)
-    gt_labels_s = torch.LongTensor(1)
-    sample_labels_t = torch.LongTensor(1)
-    sample_labels_s = torch.LongTensor(1)
-
-    im_data_s = im_data_s.to(device)
-    im_data_t = im_data_t.to(device)
-    im_data_tu = im_data_tu.to(device)
-    gt_labels_s = gt_labels_s.to(device)
-    gt_labels_t = gt_labels_t.to(device)
-    sample_labels_t = sample_labels_t.to(device)
-    sample_labels_s = sample_labels_s.to(device)
-
-
-    im_data_s = Variable(im_data_s)
-    im_data_t = Variable(im_data_t)
-    im_data_tu = Variable(im_data_tu)
-    gt_labels_s = Variable(gt_labels_s)
-    gt_labels_t = Variable(gt_labels_t)
-    sample_labels_t = Variable(sample_labels_t)
-    sample_labels_s = Variable(sample_labels_s)
  
 
     if os.path.exists(args.checkpath) == False:
@@ -364,6 +327,7 @@ def main():
                 pred1 = output1.data.max(1)[1]
                 for t, p in zip(gt_labels_t.view(-1), pred1.view(-1)):
                     confusion_matrix[t.long(), p.long()] += 1
+                print(confusion_matrix)
                 correct += pred1.eq(gt_labels_t.data).cpu().sum()
                 test_loss += criterion(output1, gt_labels_t) / len(loader)
         print('\nTest set: Average loss: {:.4f}, '

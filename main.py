@@ -62,7 +62,7 @@ def main():
     parser.add_argument('--loss',type=str, default='CE',choices=['CE', 'FL','CBFL'],
                         help='classifier loss function')
     parser.add_argument('--attribute', type = str, default = None,
-                        choices = ['word2vec','glove.6B.100d.txt','glove.6B.300d.txt','glove_anurag','glove.840B.300d.txt','glove.twitter.27B.200d.txt', 'glove.twitter.27B.50d.txt' ,'glove.42B.300d.txt','glove.6B.200d.txt','glove.6B.50d.txt','glove.twitter.27B.100d.txt','glove.twitter.27B.25d.txt'],
+                        choices = ['word2vec','glove.6B.100d.txt','glove.6B.300d.txt','glove_anurag','fasttext_anurag','glove.840B.300d.txt','glove.twitter.27B.200d.txt', 'glove.twitter.27B.50d.txt' ,'glove.42B.300d.txt','glove.6B.200d.txt','glove.6B.50d.txt','glove.twitter.27B.100d.txt','glove.twitter.27B.25d.txt'],
                         help='semantic attribute feature vector to be used')
     parser.add_argument('--dim', type=int, default=300,
                         help='dimensionality of the feature vector - make sure this in sync with the dim of the semantic attribute vector')    
@@ -107,7 +107,6 @@ def main():
         inc = 4096
     else:
         raise ValueError('Model cannot be recognized.')
-
     params = []
     for key, value in dict(G.named_parameters()).items():
         if value.requires_grad:
@@ -142,9 +141,9 @@ def main():
     if args.attribute is not None:
         att = np.load('attributes/%s_%s.npy'%(args.dataset,args.attribute))    
         if use_gpu:
-            att = nn.Parameter(F.normalize(torch.cuda.FloatTensor(att)))
+            att = nn.Parameter(torch.cuda.FloatTensor(att))
         else:
-            att = nn.Parameter(F.normalize(torch.FloatTensor(att,device = "cpu")))
+            att = nn.Parameter(torch.FloatTensor(att,device = "cpu"))
         if args.deep:
             F1.fc3.weight = att
         else:
@@ -292,8 +291,8 @@ def main():
             if step % args.log_interval == 0:
                 print(log_train)
             if step % args.save_interval == 0 and step > 0:
-                loss_test, acc_test = test(target_loader_test)
                 loss_val, acc_val = test(target_loader_val)
+                loss_test, acc_test = test(target_loader_test)
                 G.train()
                 F1.train()
                 if acc_val >= best_acc:
@@ -367,6 +366,8 @@ def main():
                     confusion_matrix[t.long(), p.long()] += 1
                 correct += pred1.eq(gt_labels_t.data).cpu().sum()
                 test_loss += criterion(output1, gt_labels_t) / len(loader)
+        np.save("cf_target.npy",confusion_matrix)
+        print(confusion_matrix)
         print('\nTest set: Average loss: {:.4f}, '
             'Accuracy: {}/{} F1 ({:.0f}%)\n'.
             format(test_loss, correct, size,
