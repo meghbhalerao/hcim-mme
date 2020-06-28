@@ -38,12 +38,21 @@ elif embed == 'glove':
 elif embed == 'fasttext':
     filename = '../../../model/%s-pret/%s'%(embed,embed_model)    
 
+
+# Function for finding closest embedding vector if the label is not in the vocab
+def find_closest_embeddings(embedding):
+    return sorted(embeddings_dict.keys(), key=lambda word: spatial.distance.euclidean(embeddings_dict[word], embedding))
+
 # Loading the model in w2v format for harmonization
 model = KeyedVectors.load_word2vec_format(filename, binary=binary)
-#words = list(model.wv.vocab)
+words = list(model.wv.vocab)
+print(model.wv)
+
 num_class =  len(class_list)
 a = np.zeros((num_class,dim),dtype = float)
 i = 0
+
+
 for item in class_list:
     item = str(item)
     item = item.lower()
