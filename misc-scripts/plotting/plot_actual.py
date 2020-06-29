@@ -4,7 +4,7 @@ import re
 import os
 
 # class list dirty strings
-class_list = "lists/multi-class-list.txt"
+class_list = "multi-class-list.txt"
 
 # Making the list of classes
 f = open(class_list)
@@ -25,8 +25,8 @@ f = open("classes.txt", "w")
 for val in class_list:
     f.write(str(val) + '\n')
 
-# roor dir of the target examples
-root = "../data/multi/real/"
+# roor dir of the source or target examples
+root = "../../data/multi/painting/"
 class_num_list = []
 
 for class_ in class_list:
@@ -35,7 +35,7 @@ for class_ in class_list:
     class_num_list.append(length)
 
 
-f = open("real_class_num_list.txt", "w")
+f = open("painting_class_num_list.txt", "w")
 for val in class_num_list:
     f.write(str(val) + '\n')
 
