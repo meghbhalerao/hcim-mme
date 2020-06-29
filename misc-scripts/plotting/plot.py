@@ -4,9 +4,9 @@ import re
 import os
 
 # class list dirty strings
-class_num_actual_source = "real_num_actual_pc.txt"
-class_num_actual_target = "sketch_num_actual_pc.txt"
-class_num_pred = "sketch_num_pred_pc.txt"
+class_num_actual_source = "painting_num_actual_pc.txt"
+class_num_actual_target = "real_num_actual_pc.txt"
+class_num_pred = "real_num_pred_pc.txt"
 
 
 # Making the list of classes and their number of samples
@@ -41,7 +41,7 @@ class_num_pred = np.array(class_num_pred)
 class_num_actual_target = np.array(class_num_actual_target)
 
 # sorting both the arrays accoring to the actual number of exmaples per class
-#print(np.sum(abs(class_num_pred-class_num_actual))/sum(class_num_pred))
+print(np.sum(abs(class_num_pred-class_num_actual_target))/sum(class_num_pred))
 
 arr1inds = class_num_actual_target.argsort()
 class_num_actual_target = class_num_actual_target[arr1inds]
