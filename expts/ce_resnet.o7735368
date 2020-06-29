@@ -1,0 +1,1158 @@
+Dataset multi Source painting Target real Labeled num perclass 3 Network resnet34
+126 classes in this dataset
+Device: cuda  Loss: CE  Attributes: None
+Using: Predictor_deep
+S painting T real Train Ep: 0 lr0.01 	 Loss Classification: 4.935447 Loss T 0.471010 Method MME
+
+S painting T real Train Ep: 100 lr0.009925650290240803 	 Loss Classification: 0.918371 Loss T 0.218013 Method MME
+
+S painting T real Train Ep: 200 lr0.009852577760521605 	 Loss Classification: 0.922199 Loss T 0.171762 Method MME
+
+S painting T real Train Ep: 300 lr0.009780748269686728 	 Loss Classification: 0.472125 Loss T 0.139070 Method MME
+
+S painting T real Train Ep: 400 lr0.009710128909124701 	 Loss Classification: 0.881683 Loss T 0.137543 Method MME
+
+S painting T real Train Ep: 500 lr0.00964068794694323 	 Loss Classification: 0.694855 Loss T 0.129870 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.1502, Accuracy: 261/360 F1 (72%)
+
+tensor([[342.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 434.,   1.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 338.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   2.,  ..., 403.,   0.,   0.],
+        [  2.,   0.,   0.,  ...,   0., 474.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   1., 625.]])
+
+Test set: Average loss: 1.0661, Accuracy: 51508/69936 F1 (73%)
+
+best acc test 73.650194 best acc val 72.500000
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 600 lr0.00957239477517603 	 Loss Classification: 1.049806 Loss T 0.142929 Method MME
+
+S painting T real Train Ep: 700 lr0.009505219859830012 	 Loss Classification: 0.790838 Loss T 0.136453 Method MME
+
+S painting T real Train Ep: 800 lr0.009439134693595126 	 Loss Classification: 0.545638 Loss T 0.186852 Method MME
+
+S painting T real Train Ep: 900 lr0.009374111751051751 	 Loss Classification: 0.653603 Loss T 0.128849 Method MME
+
+S painting T real Train Ep: 1000 lr0.009310124446222227 	 Loss Classification: 0.616060 Loss T 0.120237 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.1475, Accuracy: 259/360 F1 (71%)
+
+tensor([[314.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 400.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 326.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   1.,  ..., 488.,   0.,   0.],
+        [  0.,   0.,   0.,  ...,   0., 383.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 608.]])
+
+Test set: Average loss: 1.0148, Accuracy: 52749/69936 F1 (75%)
+
+best acc test 73.650194 best acc val 71.944444
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 1100 lr0.00924714709232377 	 Loss Classification: 0.600407 Loss T 0.133142 Method MME
+
+S painting T real Train Ep: 1200 lr0.009185154863590003 	 Loss Classification: 0.647573 Loss T 0.169585 Method MME
+
+S painting T real Train Ep: 1300 lr0.00912412375903735 	 Loss Classification: 0.906312 Loss T 0.105097 Method MME
+
+S painting T real Train Ep: 1400 lr0.009064030568061049 	 Loss Classification: 0.317734 Loss T 0.106292 Method MME
+
+S painting T real Train Ep: 1500 lr0.009004852837753237 	 Loss Classification: 0.531297 Loss T 0.109441 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.1386, Accuracy: 266/360 F1 (73%)
+
+tensor([[366.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 445.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 338.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   1.,  ..., 480.,   0.,   0.],
+        [  3.,   0.,   0.,  ...,   0., 525.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   2., 612.]])
+
+Test set: Average loss: 1.0339, Accuracy: 52917/69936 F1 (75%)
+
+best acc test 75.664894 best acc val 73.888889
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 1600 lr0.008946568841842816 	 Loss Classification: 0.297161 Loss T 0.124534 Method MME
+
+S painting T real Train Ep: 1700 lr0.008889157551163433 	 Loss Classification: 0.371815 Loss T 0.104304 Method MME
+
+S painting T real Train Ep: 1800 lr0.008832598605562044 	 Loss Classification: 0.482802 Loss T 0.117090 Method MME
+
+S painting T real Train Ep: 1900 lr0.008776872287166303 	 Loss Classification: 0.262821 Loss T 0.125579 Method MME
+
+S painting T real Train Ep: 2000 lr0.008721959494934213 	 Loss Classification: 0.436575 Loss T 0.125365 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.1264, Accuracy: 264/360 F1 (73%)
+
+tensor([[372.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 428.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 339.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   0.,  ..., 515.,   0.,   0.],
+        [  4.,   0.,   0.,  ...,   0., 443.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 623.]])
+
+Test set: Average loss: 0.9931, Accuracy: 53683/69936 F1 (76%)
+
+best acc test 75.664894 best acc val 73.333333
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 2100 lr0.008667841720414475 	 Loss Classification: 0.558289 Loss T 0.125699 Method MME
+
+S painting T real Train Ep: 2200 lr0.008614501024650454 	 Loss Classification: 0.458147 Loss T 0.125058 Method MME
+
+S painting T real Train Ep: 2300 lr0.008561920016164943 	 Loss Classification: 0.616270 Loss T 0.130904 Method MME
+
+S painting T real Train Ep: 2400 lr0.008510081829966844 	 Loss Classification: 0.266538 Loss T 0.124027 Method MME
+
+S painting T real Train Ep: 2500 lr0.008458970107524513 	 Loss Classification: 0.519263 Loss T 0.124956 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.1518, Accuracy: 266/360 F1 (73%)
+
+tensor([[356.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 451.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 342.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   1.,  ..., 537.,   0.,   0.],
+        [  2.,   0.,   0.,  ...,   0., 459.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 622.]])
+
+Test set: Average loss: 1.0105, Accuracy: 53677/69936 F1 (76%)
+
+best acc test 76.751601 best acc val 73.888889
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 2600 lr0.008408568977653933 	 Loss Classification: 0.455588 Loss T 0.120936 Method MME
+
+S painting T real Train Ep: 2700 lr0.00835886303827305 	 Loss Classification: 0.367451 Loss T 0.094318 Method MME
+
+S painting T real Train Ep: 2800 lr0.008309837338976545 	 Loss Classification: 0.282586 Loss T 0.105093 Method MME
+
+S painting T real Train Ep: 2900 lr0.008261477364388068 	 Loss Classification: 0.230492 Loss T 0.095953 Method MME
+
+S painting T real Train Ep: 3000 lr0.008213769018249545 	 Loss Classification: 0.407427 Loss T 0.114485 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.1730, Accuracy: 263/360 F1 (73%)
+
+tensor([[353.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 449.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 338.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   2.,  ..., 515.,   0.,   0.],
+        [  3.,   0.,   0.,  ...,   0., 528.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 615.]])
+
+Test set: Average loss: 1.0486, Accuracy: 53582/69936 F1 (76%)
+
+best acc test 76.751601 best acc val 73.055556
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 3100 lr0.008166698608209509 	 Loss Classification: 0.510934 Loss T 0.123006 Method MME
+
+S painting T real Train Ep: 3200 lr0.008120252831274708 	 Loss Classification: 0.471681 Loss T 0.098648 Method MME
+
+S painting T real Train Ep: 3300 lr0.008074418759891278 	 Loss Classification: 0.354764 Loss T 0.108760 Method MME
+
+S painting T real Train Ep: 3400 lr0.008029183828623731 	 Loss Classification: 0.212499 Loss T 0.092611 Method MME
+
+S painting T real Train Ep: 3500 lr0.007984535821401871 	 Loss Classification: 0.377547 Loss T 0.109565 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.2507, Accuracy: 269/360 F1 (74%)
+
+tensor([[370.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 457.,   1.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 334.,  ...,   0.,   1.,   0.],
+        ...,
+        [  0.,   0.,   3.,  ..., 551.,   0.,   0.],
+        [  2.,   0.,   0.,  ...,   0., 546.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   2., 623.]])
+
+Test set: Average loss: 1.0676, Accuracy: 53877/69936 F1 (77%)
+
+best acc test 77.037577 best acc val 74.722222
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 3600 lr0.007940462859307384 	 Loss Classification: 0.158161 Loss T 0.132111 Method MME
+
+S painting T real Train Ep: 3700 lr0.007896953388873518 	 Loss Classification: 0.207745 Loss T 0.111884 Method MME
+
+S painting T real Train Ep: 3800 lr0.007853996170872714 	 Loss Classification: 0.936913 Loss T 0.125639 Method MME
+
+S painting T real Train Ep: 3900 lr0.00781158026956848 	 Loss Classification: 0.293352 Loss T 0.106137 Method MME
+
+S painting T real Train Ep: 4000 lr0.007769695042409123 	 Loss Classification: 0.183621 Loss T 0.129221 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.2070, Accuracy: 263/360 F1 (73%)
+
+tensor([[375.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 447.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 323.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   1.,  ..., 528.,   0.,   0.],
+        [  7.,   0.,   0.,  ...,   0., 442.,   0.],
+        [  1.,   0.,   0.,  ...,   0.,   1., 628.]])
+
+Test set: Average loss: 1.0558, Accuracy: 54082/69936 F1 (77%)
+
+best acc test 77.037577 best acc val 73.055556
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 4100 lr0.007728330130142108 	 Loss Classification: 0.272216 Loss T 0.099847 Method MME
+
+S painting T real Train Ep: 4200 lr0.007687475447329114 	 Loss Classification: 0.257768 Loss T 0.092440 Method MME
+
+S painting T real Train Ep: 4300 lr0.0076471211732427845 	 Loss Classification: 0.071420 Loss T 0.092456 Method MME
+
+S painting T real Train Ep: 4400 lr0.007607257743127307 	 Loss Classification: 0.264412 Loss T 0.108185 Method MME
+
+S painting T real Train Ep: 4500 lr0.007567875839805858 	 Loss Classification: 0.341417 Loss T 0.114555 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.2160, Accuracy: 263/360 F1 (73%)
+
+tensor([[341.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 461.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 336.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   1.,  ..., 546.,   0.,   0.],
+        [  1.,   0.,   0.,  ...,   0., 529.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   2., 630.]])
+
+Test set: Average loss: 1.0825, Accuracy: 54230/69936 F1 (77%)
+
+best acc test 77.037577 best acc val 73.055556
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 4600 lr0.007528966385618854 	 Loss Classification: 0.237530 Loss T 0.094660 Method MME
+
+S painting T real Train Ep: 4700 lr0.007490520534677821 	 Loss Classification: 0.303113 Loss T 0.116368 Method MME
+
+S painting T real Train Ep: 4800 lr0.007452529665420465 	 Loss Classification: 0.186788 Loss T 0.127879 Method MME
+
+S painting T real Train Ep: 4900 lr0.007414985373453289 	 Loss Classification: 0.489353 Loss T 0.072861 Method MME
+
+S painting T real Train Ep: 5000 lr0.007377879464668811 	 Loss Classification: 0.337098 Loss T 0.094091 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.1912, Accuracy: 267/360 F1 (74%)
+
+tensor([[358.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 451.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 340.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   0.,  ..., 512.,   0.,   0.],
+        [  4.,   0.,   0.,  ...,   0., 468.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 625.]])
+
+Test set: Average loss: 1.1038, Accuracy: 54031/69936 F1 (77%)
+
+best acc test 77.037577 best acc val 74.166667
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 5100 lr0.007341203948625087 	 Loss Classification: 0.208342 Loss T 0.117115 Method MME
+
+S painting T real Train Ep: 5200 lr0.007304951032175895 	 Loss Classification: 0.560262 Loss T 0.105617 Method MME
+
+S painting T real Train Ep: 5300 lr0.007269113113340497 	 Loss Classification: 0.144151 Loss T 0.091605 Method MME
+
+S painting T real Train Ep: 5400 lr0.007233682775402483 	 Loss Classification: 0.193938 Loss T 0.083355 Method MME
+
+S painting T real Train Ep: 5500 lr0.007198652781227704 	 Loss Classification: 0.200799 Loss T 0.085007 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 2., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.2745, Accuracy: 258/360 F1 (71%)
+
+tensor([[313.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 458.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 332.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 549.,   0.,   0.],
+        [  2.,   0.,   0.,  ...,   0., 460.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 626.]])
+
+Test set: Average loss: 1.1017, Accuracy: 54309/69936 F1 (77%)
+
+best acc test 77.037577 best acc val 71.666667
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 5600 lr0.007164016067791809 	 Loss Classification: 0.239918 Loss T 0.098800 Method MME
+
+S painting T real Train Ep: 5700 lr0.0071297657409083726 	 Loss Classification: 0.155918 Loss T 0.107887 Method MME
+
+S painting T real Train Ep: 5800 lr0.0070958950701490225 	 Loss Classification: 0.369298 Loss T 0.085908 Method MME
+
+S painting T real Train Ep: 5900 lr0.007062397483947426 	 Loss Classification: 0.269075 Loss T 0.106429 Method MME
+
+S painting T real Train Ep: 6000 lr0.007029266564879363 	 Loss Classification: 0.210117 Loss T 0.100984 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.3155, Accuracy: 262/360 F1 (72%)
+
+tensor([[360.,   0.,   0.,  ...,   0.,   1.,   0.],
+        [  0., 460.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 340.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   0.,  ..., 534.,   0.,   0.],
+        [  2.,   0.,   0.,  ...,   0., 467.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 620.]])
+
+Test set: Average loss: 1.1095, Accuracy: 54308/69936 F1 (77%)
+
+best acc test 77.037577 best acc val 72.777778
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 6100 lr0.006996496045111504 	 Loss Classification: 0.228023 Loss T 0.109951 Method MME
+
+S painting T real Train Ep: 6200 lr0.00696407980201184 	 Loss Classification: 0.305985 Loss T 0.124712 Method MME
+
+S painting T real Train Ep: 6300 lr0.006932011853915101 	 Loss Classification: 0.129469 Loss T 0.116841 Method MME
+
+S painting T real Train Ep: 6400 lr0.006900286356036734 	 Loss Classification: 0.385850 Loss T 0.108642 Method MME
+
+S painting T real Train Ep: 6500 lr0.006868897596529406 	 Loss Classification: 0.294040 Loss T 0.132161 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.3025, Accuracy: 268/360 F1 (74%)
+
+tensor([[371.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 444.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 330.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   2.,  ..., 522.,   0.,   0.],
+        [ 11.,   0.,   1.,  ...,   0., 449.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 624.]])
+
+Test set: Average loss: 1.1500, Accuracy: 54101/69936 F1 (77%)
+
+best acc test 77.037577 best acc val 74.444444
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 6600 lr0.006837839992676177 	 Loss Classification: 0.124914 Loss T 0.084918 Method MME
+
+S painting T real Train Ep: 6700 lr0.006807108087214876 	 Loss Classification: 0.365760 Loss T 0.100969 Method MME
+
+S painting T real Train Ep: 6800 lr0.006776696544788352 	 Loss Classification: 0.145142 Loss T 0.074804 Method MME
+
+S painting T real Train Ep: 6900 lr0.006746600148515609 	 Loss Classification: 0.124485 Loss T 0.092533 Method MME
+
+S painting T real Train Ep: 7000 lr0.006716813796678979 	 Loss Classification: 0.080932 Loss T 0.067447 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.3704, Accuracy: 262/360 F1 (72%)
+
+tensor([[331.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 457.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 318.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 530.,   0.,   0.],
+        [  3.,   0.,   0.,  ...,   0., 473.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 628.]])
+
+Test set: Average loss: 1.1372, Accuracy: 54354/69936 F1 (77%)
+
+best acc test 77.037577 best acc val 72.777778
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 7100 lr0.006687332499522798 	 Loss Classification: 0.100378 Loss T 0.113930 Method MME
+
+S painting T real Train Ep: 7200 lr0.006658151376159165 	 Loss Classification: 0.202900 Loss T 0.082021 Method MME
+
+S painting T real Train Ep: 7300 lr0.00662926565157663 	 Loss Classification: 0.180591 Loss T 0.081991 Method MME
+
+S painting T real Train Ep: 7400 lr0.006600670653747793 	 Loss Classification: 0.299975 Loss T 0.101682 Method MME
+
+S painting T real Train Ep: 7500 lr0.0065723618108320175 	 Loss Classification: 0.081233 Loss T 0.072639 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.3303, Accuracy: 263/360 F1 (73%)
+
+tensor([[328.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 456.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 325.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   2.,  ..., 533.,   0.,   0.],
+        [  4.,   0.,   0.,  ...,   0., 458.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 627.]])
+
+Test set: Average loss: 1.1610, Accuracy: 54331/69936 F1 (77%)
+
+best acc test 77.037577 best acc val 73.055556
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 7600 lr0.006544334648469591 	 Loss Classification: 0.280456 Loss T 0.094285 Method MME
+
+S painting T real Train Ep: 7700 lr0.006516584787163857 	 Loss Classification: 0.160826 Loss T 0.115761 Method MME
+
+S painting T real Train Ep: 7800 lr0.006489107939747966 	 Loss Classification: 0.156883 Loss T 0.088014 Method MME
+
+S painting T real Train Ep: 7900 lr0.0064618999089330565 	 Loss Classification: 0.138646 Loss T 0.086084 Method MME
+
+S painting T real Train Ep: 8000 lr0.006434956584934828 	 Loss Classification: 0.122230 Loss T 0.079381 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 3., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.3203, Accuracy: 270/360 F1 (75%)
+
+tensor([[357.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 452.,   0.,  ...,   0.,   1.,   0.],
+        [  0.,   0., 327.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 556.,   0.,   0.],
+        [  6.,   0.,   0.,  ...,   0., 515.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 629.]])
+
+Test set: Average loss: 1.1664, Accuracy: 54468/69936 F1 (77%)
+
+best acc test 77.882636 best acc val 75.000000
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 8100 lr0.006408273943175546 	 Loss Classification: 0.149052 Loss T 0.082878 Method MME
+
+S painting T real Train Ep: 8200 lr0.006381848042058713 	 Loss Classification: 0.219001 Loss T 0.113294 Method MME
+
+S painting T real Train Ep: 8300 lr0.0063556750208137005 	 Loss Classification: 0.175212 Loss T 0.094534 Method MME
+
+S painting T real Train Ep: 8400 lr0.006329751097407787 	 Loss Classification: 0.164289 Loss T 0.073507 Method MME
+
+S painting T real Train Ep: 8500 lr0.0063040725665231365 	 Loss Classification: 0.201923 Loss T 0.090515 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.3802, Accuracy: 267/360 F1 (74%)
+
+tensor([[368.,   0.,   0.,  ...,   0.,   1.,   0.],
+        [  0., 451.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 343.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   1.,  ..., 517.,   0.,   0.],
+        [  2.,   0.,   0.,  ...,   0., 571.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   2., 626.]])
+
+Test set: Average loss: 1.1956, Accuracy: 54517/69936 F1 (77%)
+
+best acc test 77.882636 best acc val 74.166667
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 8600 lr0.006278635797596355 	 Loss Classification: 0.264996 Loss T 0.123148 Method MME
+
+S painting T real Train Ep: 8700 lr0.006253437232918371 	 Loss Classification: 0.184325 Loss T 0.104093 Method MME
+
+S painting T real Train Ep: 8800 lr0.0062284733857924735 	 Loss Classification: 0.093271 Loss T 0.067507 Method MME
+
+S painting T real Train Ep: 8900 lr0.006203740838748417 	 Loss Classification: 0.157915 Loss T 0.078803 Method MME
+
+S painting T real Train Ep: 9000 lr0.006179236241810624 	 Loss Classification: 0.240999 Loss T 0.087283 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.4390, Accuracy: 262/360 F1 (72%)
+
+tensor([[340.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 446.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 337.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 570.,   0.,   0.],
+        [  2.,   0.,   0.,  ...,   0., 556.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 627.]])
+
+Test set: Average loss: 1.1737, Accuracy: 54667/69936 F1 (78%)
+
+best acc test 77.882636 best acc val 72.777778
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 9100 lr0.006154956310818535 	 Loss Classification: 0.163485 Loss T 0.073869 Method MME
+
+S painting T real Train Ep: 9200 lr0.0061308978257973165 	 Loss Classification: 0.105402 Loss T 0.091207 Method MME
+
+S painting T real Train Ep: 9300 lr0.0061070576293771285 	 Loss Classification: 0.242439 Loss T 0.068422 Method MME
+
+S painting T real Train Ep: 9400 lr0.006083432625259276 	 Loss Classification: 0.113736 Loss T 0.077546 Method MME
+
+S painting T real Train Ep: 9500 lr0.006060019776727621 	 Loss Classification: 0.109383 Loss T 0.103690 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 3., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.3573, Accuracy: 268/360 F1 (74%)
+
+tensor([[354.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 450.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 337.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   2.,  ..., 555.,   0.,   0.],
+        [  1.,   0.,   0.,  ...,   0., 511.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   1., 632.]])
+
+Test set: Average loss: 1.2064, Accuracy: 54593/69936 F1 (78%)
+
+best acc test 77.882636 best acc val 74.444444
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 9600 lr0.00603681610520369 	 Loss Classification: 0.149178 Loss T 0.102677 Method MME
+
+S painting T real Train Ep: 9700 lr0.0060138186888439825 	 Loss Classification: 0.136279 Loss T 0.082925 Method MME
+
+S painting T real Train Ep: 9800 lr0.005991024661178045 	 Loss Classification: 0.281343 Loss T 0.091258 Method MME
+
+S painting T real Train Ep: 9900 lr0.0059684312097859115 	 Loss Classification: 0.092192 Loss T 0.109651 Method MME
+
+S painting T real Train Ep: 10000 lr0.005946035575013605 	 Loss Classification: 0.148332 Loss T 0.106554 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 3., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.4499, Accuracy: 256/360 F1 (71%)
+
+tensor([[348.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 449.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 332.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 564.,   0.,   0.],
+        [  2.,   0.,   0.,  ...,   0., 492.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 631.]])
+
+Test set: Average loss: 1.2119, Accuracy: 54746/69936 F1 (78%)
+
+best acc test 77.882636 best acc val 71.111111
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 10100 lr0.005923835048725393 	 Loss Classification: 0.111643 Loss T 0.091948 Method MME
+
+S painting T real Train Ep: 10200 lr0.005901826973091593 	 Loss Classification: 0.039532 Loss T 0.076316 Method MME
+
+S painting T real Train Ep: 10300 lr0.005880008739410735 	 Loss Classification: 0.266804 Loss T 0.083752 Method MME
+
+S painting T real Train Ep: 10400 lr0.005858377786964935 	 Loss Classification: 0.225355 Loss T 0.075041 Method MME
+
+S painting T real Train Ep: 10500 lr0.005836931601907399 	 Loss Classification: 0.063379 Loss T 0.101753 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 3., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.4453, Accuracy: 264/360 F1 (73%)
+
+tensor([[325.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 455.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 339.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   1.,  ..., 556.,   0.,   0.],
+        [  1.,   0.,   0.,  ...,   0., 450.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 625.]])
+
+Test set: Average loss: 1.2228, Accuracy: 54620/69936 F1 (78%)
+
+best acc test 77.882636 best acc val 73.333333
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 10600 lr0.005815667716181004 	 Loss Classification: 0.065609 Loss T 0.061650 Method MME
+
+S painting T real Train Ep: 10700 lr0.005794583706466925 	 Loss Classification: 0.038435 Loss T 0.104610 Method MME
+
+S painting T real Train Ep: 10800 lr0.005773677193162352 	 Loss Classification: 0.156249 Loss T 0.103934 Method MME
+
+S painting T real Train Ep: 10900 lr0.005752945839386346 	 Loss Classification: 0.107151 Loss T 0.082766 Method MME
+
+S painting T real Train Ep: 11000 lr0.005732387350012933 	 Loss Classification: 0.191497 Loss T 0.087316 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 3., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.4256, Accuracy: 266/360 F1 (73%)
+
+tensor([[367.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 449.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 336.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   1.,  ..., 542.,   0.,   0.],
+        [  6.,   0.,   0.,  ...,   0., 490.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 626.]])
+
+Test set: Average loss: 1.2406, Accuracy: 54625/69936 F1 (78%)
+
+best acc test 77.882636 best acc val 73.888889
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 11100 lr0.005711999470730565 	 Loss Classification: 0.138482 Loss T 0.081142 Method MME
+
+S painting T real Train Ep: 11200 lr0.005691779987127103 	 Loss Classification: 0.289165 Loss T 0.072346 Method MME
+
+S painting T real Train Ep: 11300 lr0.005671726723799515 	 Loss Classification: 0.177054 Loss T 0.055600 Method MME
+
+S painting T real Train Ep: 11400 lr0.005651837543487509 	 Loss Classification: 0.081900 Loss T 0.102487 Method MME
+
+S painting T real Train Ep: 11500 lr0.005632110346230358 	 Loss Classification: 0.095907 Loss T 0.074451 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 2., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.4309, Accuracy: 270/360 F1 (75%)
+
+tensor([[368.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 450.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 340.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   1.,  ..., 557.,   0.,   0.],
+        [  3.,   0.,   0.,  ...,   0., 468.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 626.]])
+
+Test set: Average loss: 1.2510, Accuracy: 54665/69936 F1 (78%)
+
+best acc test 78.164322 best acc val 75.000000
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 11600 lr0.005612543068546177 	 Loss Classification: 0.248785 Loss T 0.074155 Method MME
+
+S painting T real Train Ep: 11700 lr0.005593133682632953 	 Loss Classification: 0.050333 Loss T 0.086082 Method MME
+
+S painting T real Train Ep: 11800 lr0.005573880195590681 	 Loss Classification: 0.100006 Loss T 0.107756 Method MME
+
+S painting T real Train Ep: 11900 lr0.0055547806486639095 	 Loss Classification: 0.194962 Loss T 0.106330 Method MME
+
+S painting T real Train Ep: 12000 lr0.005535833116504121 	 Loss Classification: 0.102430 Loss T 0.088966 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 3., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.4481, Accuracy: 272/360 F1 (75%)
+
+tensor([[362.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 460.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 334.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 551.,   0.,   0.],
+        [  6.,   0.,   0.,  ...,   0., 501.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 629.]])
+
+Test set: Average loss: 1.2481, Accuracy: 54894/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 75.555556
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 12100 lr0.00551703570645129 	 Loss Classification: 0.078058 Loss T 0.084161 Method MME
+
+S painting T real Train Ep: 12200 lr0.005498386557834078 	 Loss Classification: 0.181199 Loss T 0.103905 Method MME
+
+S painting T real Train Ep: 12300 lr0.00547988384128807 	 Loss Classification: 0.101895 Loss T 0.058744 Method MME
+
+S painting T real Train Ep: 12400 lr0.005461525758091539 	 Loss Classification: 0.292801 Loss T 0.120344 Method MME
+
+S painting T real Train Ep: 12500 lr0.005443310539518174 	 Loss Classification: 0.156237 Loss T 0.082422 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.4173, Accuracy: 267/360 F1 (74%)
+
+tensor([[352.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 444.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 327.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 533.,   0.,   0.],
+        [  3.,   0.,   0.,  ...,   0., 509.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 624.]])
+
+Test set: Average loss: 1.2724, Accuracy: 54747/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 74.166667
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 12600 lr0.005425236446206295 	 Loss Classification: 0.230744 Loss T 0.095220 Method MME
+
+S painting T real Train Ep: 12700 lr0.005407301767544059 	 Loss Classification: 0.156167 Loss T 0.090006 Method MME
+
+S painting T real Train Ep: 12800 lr0.005389504821070177 	 Loss Classification: 0.118770 Loss T 0.101082 Method MME
+
+S painting T real Train Ep: 12900 lr0.005371843951889677 	 Loss Classification: 0.124779 Loss T 0.097458 Method MME
+
+S painting T real Train Ep: 13000 lr0.0053543175321042955 	 Loss Classification: 0.115431 Loss T 0.076083 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.4767, Accuracy: 266/360 F1 (73%)
+
+tensor([[363.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 449.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 328.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 543.,   0.,   0.],
+        [  5.,   0.,   0.,  ...,   0., 515.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 631.]])
+
+Test set: Average loss: 1.2784, Accuracy: 54874/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 73.888889
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 13100 lr0.005336923960257046 	 Loss Classification: 0.072564 Loss T 0.109303 Method MME
+
+S painting T real Train Ep: 13200 lr0.0053196616607905645 	 Loss Classification: 0.035703 Loss T 0.082949 Method MME
+
+S painting T real Train Ep: 13300 lr0.0053025290835188275 	 Loss Classification: 0.092196 Loss T 0.110187 Method MME
+
+S painting T real Train Ep: 13400 lr0.005285524703111859 	 Loss Classification: 0.137742 Loss T 0.081028 Method MME
+
+S painting T real Train Ep: 13500 lr0.005268647018593052 	 Loss Classification: 0.038622 Loss T 0.078723 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.5222, Accuracy: 262/360 F1 (72%)
+
+tensor([[349.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 449.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 331.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 511.,   0.,   0.],
+        [  1.,   0.,   0.,  ...,   0., 501.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 628.]])
+
+Test set: Average loss: 1.3090, Accuracy: 54709/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 72.777778
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 13600 lr0.005251894552848747 	 Loss Classification: 0.118523 Loss T 0.091664 Method MME
+
+S painting T real Train Ep: 13700 lr0.005235265852149712 	 Loss Classification: 0.080396 Loss T 0.054507 Method MME
+
+S painting T real Train Ep: 13800 lr0.005218759485684187 	 Loss Classification: 0.092839 Loss T 0.100415 Method MME
+
+S painting T real Train Ep: 13900 lr0.005202374045102174 	 Loss Classification: 0.059542 Loss T 0.088677 Method MME
+
+S painting T real Train Ep: 14000 lr0.005186108144070652 	 Loss Classification: 0.051725 Loss T 0.069228 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.5183, Accuracy: 269/360 F1 (74%)
+
+tensor([[362.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 450.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 324.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   0.,  ..., 563.,   0.,   0.],
+        [  5.,   0.,   0.,  ...,   0., 491.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 632.]])
+
+Test set: Average loss: 1.3320, Accuracy: 54622/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 74.722222
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 14100 lr0.005169960417839403 	 Loss Classification: 0.117096 Loss T 0.080683 Method MME
+
+S painting T real Train Ep: 14200 lr0.005153929522817161 	 Loss Classification: 0.122311 Loss T 0.062685 Method MME
+
+S painting T real Train Ep: 14300 lr0.005138014136157799 	 Loss Classification: 0.035410 Loss T 0.088870 Method MME
+
+S painting T real Train Ep: 14400 lr0.005122212955356274 	 Loss Classification: 0.128954 Loss T 0.088882 Method MME
+
+S painting T real Train Ep: 14500 lr0.005106524697854057 	 Loss Classification: 0.035639 Loss T 0.069196 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 3., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.5210, Accuracy: 267/360 F1 (74%)
+
+tensor([[348.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 452.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 335.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   0.,  ..., 539.,   0.,   0.],
+        [  1.,   0.,   0.,  ...,   0., 505.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 626.]])
+
+Test set: Average loss: 1.3107, Accuracy: 54891/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 74.166667
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 14600 lr0.005090948100653781 	 Loss Classification: 0.083014 Loss T 0.080157 Method MME
+
+S painting T real Train Ep: 14700 lr0.0050754819199428855 	 Loss Classification: 0.068127 Loss T 0.093726 Method MME
+
+S painting T real Train Ep: 14800 lr0.005060124930725974 	 Loss Classification: 0.058374 Loss T 0.081403 Method MME
+
+S painting T real Train Ep: 14900 lr0.00504487592646567 	 Loss Classification: 0.121971 Loss T 0.078856 Method MME
+
+S painting T real Train Ep: 15000 lr0.005029733718731741 	 Loss Classification: 0.088175 Loss T 0.091663 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 2., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.4954, Accuracy: 265/360 F1 (73%)
+
+tensor([[360.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 449.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 330.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   0.,   0.,  ..., 534.,   0.,   0.],
+        [  4.,   0.,   0.,  ...,   0., 502.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 629.]])
+
+Test set: Average loss: 1.3019, Accuracy: 55056/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 73.611111
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 15100 lr0.005014697136858264 	 Loss Classification: 0.112949 Loss T 0.075610 Method MME
+
+S painting T real Train Ep: 15200 lr0.004999765027608607 	 Loss Classification: 0.144734 Loss T 0.075020 Method MME
+
+S painting T real Train Ep: 15300 lr0.004984936254848047 	 Loss Classification: 0.095086 Loss T 0.073305 Method MME
+
+S painting T real Train Ep: 15400 lr0.004970209699223787 	 Loss Classification: 0.091093 Loss T 0.063282 Method MME
+
+S painting T real Train Ep: 15500 lr0.0049555842578521995 	 Loss Classification: 0.067077 Loss T 0.071107 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.5577, Accuracy: 271/360 F1 (75%)
+
+tensor([[339.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 445.,   1.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 341.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 516.,   0.,   0.],
+        [  2.,   0.,   1.,  ...,   0., 527.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 623.]])
+
+Test set: Average loss: 1.3273, Accuracy: 54825/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 75.277778
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 15600 lr0.004941058844013093 	 Loss Classification: 0.115547 Loss T 0.084048 Method MME
+
+S painting T real Train Ep: 15700 lr0.004926632386850831 	 Loss Classification: 0.092721 Loss T 0.090405 Method MME
+
+S painting T real Train Ep: 15800 lr0.004912303831082109 	 Loss Classification: 0.083877 Loss T 0.089521 Method MME
+
+S painting T real Train Ep: 15900 lr0.004898072136710217 	 Loss Classification: 0.071605 Loss T 0.102843 Method MME
+
+S painting T real Train Ep: 16000 lr0.004883936278745637 	 Loss Classification: 0.091640 Loss T 0.102255 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 2., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.6256, Accuracy: 268/360 F1 (74%)
+
+tensor([[357.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 454.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 334.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 511.,   0.,   0.],
+        [  1.,   0.,   0.,  ...,   0., 481.,   0.],
+        [  0.,   0.,   2.,  ...,   0.,   0., 626.]])
+
+Test set: Average loss: 1.3560, Accuracy: 54949/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 74.444444
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 16100 lr0.004869895246932789 	 Loss Classification: 0.056927 Loss T 0.084975 Method MME
+
+S painting T real Train Ep: 16200 lr0.004855948045482784 	 Loss Classification: 0.042247 Loss T 0.080604 Method MME
+
+S painting T real Train Ep: 16300 lr0.004842093692812012 	 Loss Classification: 0.110063 Loss T 0.072186 Method MME
+
+S painting T real Train Ep: 16400 lr0.004828331221286437 	 Loss Classification: 0.084689 Loss T 0.096599 Method MME
+
+S painting T real Train Ep: 16500 lr0.004814659676971443 	 Loss Classification: 0.063319 Loss T 0.088608 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.6684, Accuracy: 270/360 F1 (75%)
+
+tensor([[357.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 454.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 324.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 550.,   0.,   0.],
+        [  2.,   0.,   0.,  ...,   0., 510.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 624.]])
+
+Test set: Average loss: 1.3540, Accuracy: 55009/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 75.000000
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 16600 lr0.004801078119387078 	 Loss Classification: 0.044660 Loss T 0.088845 Method MME
+
+S painting T real Train Ep: 16700 lr0.004787585621268585 	 Loss Classification: 0.046312 Loss T 0.081142 Method MME
+
+S painting T real Train Ep: 16800 lr0.0047741812683320655 	 Loss Classification: 0.031726 Loss T 0.079718 Method MME
+
+S painting T real Train Ep: 16900 lr0.004760864159045157 	 Loss Classification: 0.305336 Loss T 0.084998 Method MME
+
+S painting T real Train Ep: 17000 lr0.0047476334044026 	 Loss Classification: 0.065099 Loss T 0.078384 Method MME
+
+tensor([[3., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 3., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 1.5598, Accuracy: 268/360 F1 (74%)
+
+tensor([[367.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 455.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 335.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ..., 551.,   0.,   0.],
+        [  4.,   0.,   0.,  ...,   0., 472.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   0., 633.]])
+
+Test set: Average loss: 1.3531, Accuracy: 55011/69936 F1 (78%)
+
+best acc test 78.491764 best acc val 74.444444
+record record/multi/MME/MME_net_resnet34_painting_to_real_num_3
+saving model
+S painting T real Train Ep: 17100 lr0.004734488127706559 	 Loss Classification: 0.079712 Loss T 0.078447 Method MME
+
+S painting T real Train Ep: 17200 lr0.004721427464351597 	 Loss Classification: 0.080833 Loss T 0.107761 Method MME
+
+S painting T real Train Ep: 17300 lr0.004708450561614184 	 Loss Classification: 0.137380 Loss T 0.112456 Method MME
+
+S painting T real Train Ep: 17400 lr0.004695556578446619 	 Loss Classification: 0.075707 Loss T 0.099253 Method MME
+
+S painting T real Train Ep: 17500 lr0.004682744685275263 	 Loss Classification: 0.050895 Loss T 0.091680 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 2., 0., 0.],
+        [0., 0., 0.,  ..., 0., 3., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 1.6022, Accuracy: 265/360 F1 (73%)
+
+tensor([[364.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 457.,   0.,  ...,   0.,   0.,   0.],
+        [  0.,   0., 335.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   2.,   0.,  ..., 545.,   0.,   0.],
+        [  1.,   0.,   0.,  ...,   0., 525.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 632.]])
+
+Test set: Average loss: 1.3655, Accuracy: 55127/69936 F1 (78%)
+
