@@ -68,8 +68,10 @@ def main():
                         help='dimensionality of the feature vector - make sure this in sync with the dim of the semantic attribute vector')    
     parser.add_argument('--deep', type=int, default=0,
                         help='type of classification predictor - 0 for shallow, 1 for deep')
-
-
+    parser.add_argument('--mode', type=str, default='train', choices=['train', 'infer'], help = 'mode of script train or infer')
+    # this argument is valid only if the mode is infer
+    parser.add_argument('--loadF', type=str, help = 'path to the F model')
+    parser.add_argument('--loadG', type=str, help = 'path to the G model')
 
     args = parser.parse_args()
     print('Dataset %s Source %s Target %s Labeled num perclass %s Network %s' %
@@ -134,7 +136,6 @@ def main():
             print("Using: Predictor")
 
 
-            
     # Initializing the weights of the prediction layer
     weights_init(F1)
 	# Setting the prediction layer weights as the semantic attributes
@@ -151,8 +152,15 @@ def main():
         print("attribute shape is: ", att.shape)
 
     lr = args.lr
+
+    # If the mode is inference then load the pretrained network
+    if args.mode == 'infer':
+        G = torch.load(args.loadG)
+        F1 = torch.load(args.loadF)
+     
     G.to(device)
     F1.to(device)
+
 
    
     im_data_s = torch.FloatTensor(1)
@@ -375,7 +383,10 @@ def main():
         return test_loss.data, 100. * float(correct) / size
 
 
-    train()
+    if args.mode == 'train':
+        train()
+    if args.mode == 'infer':
+        infer()
 
 
 # Invoking the main function here
