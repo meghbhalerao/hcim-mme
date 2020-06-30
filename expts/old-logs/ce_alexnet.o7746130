@@ -1,0 +1,1026 @@
+Dataset multi Source real Target sketch Labeled num perclass 3 Network alexnet
+126 classes in this dataset
+Device: cuda  Loss: CE  Attributes: None
+Using: Predictor
+S real T sketch Train Ep: 0 lr0.01 	 Loss Classification: 4.861197 Loss T 0.481827 Method MME
+
+S real T sketch Train Ep: 100 lr0.009925650290240803 	 Loss Classification: 2.166391 Loss T 0.416290 Method MME
+
+S real T sketch Train Ep: 200 lr0.009852577760521605 	 Loss Classification: 1.237520 Loss T 0.354140 Method MME
+
+S real T sketch Train Ep: 300 lr0.009780748269686728 	 Loss Classification: 1.155478 Loss T 0.297203 Method MME
+
+S real T sketch Train Ep: 400 lr0.009710128909124701 	 Loss Classification: 0.710005 Loss T 0.303484 Method MME
+
+S real T sketch Train Ep: 500 lr0.00964068794694323 	 Loss Classification: 1.059563 Loss T 0.281759 Method MME
+
+tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 2.9685, Accuracy: 114/352 F1 (32%)
+
+tensor([[ 38.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 123.,   0.,  ...,   0.,   3.,   0.],
+        [  0.,   0.,  42.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   4.,   0.,  ...,  23.,   1.,   1.],
+        [  0.,   1.,   1.,  ...,   0.,  21.,   1.],
+        [  0.,   1.,   0.,  ...,   0.,   0., 192.]])
+
+Test set: Average loss: 3.2804, Accuracy: 6681/23808 F1 (28%)
+
+best acc test 28.061996 best acc val 32.386364
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 600 lr0.00957239477517603 	 Loss Classification: 0.753508 Loss T 0.266259 Method MME
+
+S real T sketch Train Ep: 700 lr0.009505219859830012 	 Loss Classification: 0.700521 Loss T 0.283176 Method MME
+
+S real T sketch Train Ep: 800 lr0.009439134693595126 	 Loss Classification: 0.786967 Loss T 0.270590 Method MME
+
+S real T sketch Train Ep: 900 lr0.009374111751051751 	 Loss Classification: 0.787464 Loss T 0.255625 Method MME
+
+S real T sketch Train Ep: 1000 lr0.009310124446222227 	 Loss Classification: 0.608163 Loss T 0.270655 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 2.8381, Accuracy: 123/352 F1 (34%)
+
+tensor([[ 31.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 114.,   0.,  ...,   0.,   4.,   0.],
+        [  0.,   0.,  49.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   4.,   0.,  ...,  22.,   1.,   0.],
+        [  0.,   0.,   2.,  ...,   0.,  30.,   1.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 193.]])
+
+Test set: Average loss: 3.1826, Accuracy: 7346/23808 F1 (30%)
+
+best acc test 30.855175 best acc val 34.943182
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 1100 lr0.00924714709232377 	 Loss Classification: 0.600427 Loss T 0.264472 Method MME
+
+S real T sketch Train Ep: 1200 lr0.009185154863590003 	 Loss Classification: 0.689765 Loss T 0.260012 Method MME
+
+S real T sketch Train Ep: 1300 lr0.00912412375903735 	 Loss Classification: 0.431586 Loss T 0.255679 Method MME
+
+S real T sketch Train Ep: 1400 lr0.009064030568061049 	 Loss Classification: 0.539615 Loss T 0.239404 Method MME
+
+S real T sketch Train Ep: 1500 lr0.009004852837753237 	 Loss Classification: 0.460528 Loss T 0.261820 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 2.9222, Accuracy: 119/352 F1 (33%)
+
+tensor([[ 36.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  1., 119.,   0.,  ...,   0.,   4.,   0.],
+        [  0.,   0.,  50.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   3.,   0.,  ...,  19.,   1.,   0.],
+        [  0.,   0.,   2.,  ...,   0.,  41.,   1.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 192.]])
+
+Test set: Average loss: 3.1753, Accuracy: 7590/23808 F1 (31%)
+
+best acc test 30.855175 best acc val 33.806818
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 1600 lr0.008946568841842816 	 Loss Classification: 0.546166 Loss T 0.252499 Method MME
+
+S real T sketch Train Ep: 1700 lr0.008889157551163433 	 Loss Classification: 0.379682 Loss T 0.240160 Method MME
+
+S real T sketch Train Ep: 1800 lr0.008832598605562044 	 Loss Classification: 0.747114 Loss T 0.259647 Method MME
+
+S real T sketch Train Ep: 1900 lr0.008776872287166303 	 Loss Classification: 0.744003 Loss T 0.254067 Method MME
+
+S real T sketch Train Ep: 2000 lr0.008721959494934213 	 Loss Classification: 0.589898 Loss T 0.258644 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 2.7173, Accuracy: 134/352 F1 (38%)
+
+tensor([[ 33.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  1., 109.,   0.,  ...,   0.,   0.,   1.],
+        [  0.,   0.,  48.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   4.,   0.,  ...,  20.,   1.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,  37.,   1.],
+        [  0.,   0.,   2.,  ...,   0.,   0., 196.]])
+
+Test set: Average loss: 3.1093, Accuracy: 8119/23808 F1 (34%)
+
+best acc test 34.101983 best acc val 38.068182
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 2100 lr0.008667841720414475 	 Loss Classification: 0.633876 Loss T 0.262561 Method MME
+
+S real T sketch Train Ep: 2200 lr0.008614501024650454 	 Loss Classification: 0.285574 Loss T 0.260552 Method MME
+
+S real T sketch Train Ep: 2300 lr0.008561920016164943 	 Loss Classification: 0.499848 Loss T 0.256236 Method MME
+
+S real T sketch Train Ep: 2400 lr0.008510081829966844 	 Loss Classification: 0.580865 Loss T 0.276117 Method MME
+
+S real T sketch Train Ep: 2500 lr0.008458970107524513 	 Loss Classification: 0.608602 Loss T 0.260855 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 2., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 2.8085, Accuracy: 133/352 F1 (37%)
+
+tensor([[ 37.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 137.,   0.,  ...,   0.,   5.,   0.],
+        [  0.,   0.,  40.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   5.,   1.,  ...,  18.,   1.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  32.,   1.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 201.]])
+
+Test set: Average loss: 3.1336, Accuracy: 8259/23808 F1 (34%)
+
+best acc test 34.101983 best acc val 37.784091
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 2600 lr0.008408568977653933 	 Loss Classification: 0.484045 Loss T 0.243653 Method MME
+
+S real T sketch Train Ep: 2700 lr0.00835886303827305 	 Loss Classification: 0.636713 Loss T 0.235528 Method MME
+
+S real T sketch Train Ep: 2800 lr0.008309837338976545 	 Loss Classification: 0.534501 Loss T 0.230576 Method MME
+
+S real T sketch Train Ep: 2900 lr0.008261477364388068 	 Loss Classification: 0.451706 Loss T 0.246121 Method MME
+
+S real T sketch Train Ep: 3000 lr0.008213769018249545 	 Loss Classification: 0.531074 Loss T 0.266850 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 2.7890, Accuracy: 141/352 F1 (40%)
+
+tensor([[ 25.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 131.,   0.,  ...,   0.,   1.,   0.],
+        [  0.,   0.,  44.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   6.,   0.,  ...,  19.,   2.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  49.,   1.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 193.]])
+
+Test set: Average loss: 3.1178, Accuracy: 8369/23808 F1 (35%)
+
+best acc test 35.152050 best acc val 40.056818
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 3100 lr0.008166698608209509 	 Loss Classification: 0.493488 Loss T 0.236289 Method MME
+
+S real T sketch Train Ep: 3200 lr0.008120252831274708 	 Loss Classification: 0.555477 Loss T 0.208118 Method MME
+
+S real T sketch Train Ep: 3300 lr0.008074418759891278 	 Loss Classification: 0.380430 Loss T 0.244037 Method MME
+
+S real T sketch Train Ep: 3400 lr0.008029183828623731 	 Loss Classification: 0.726608 Loss T 0.254980 Method MME
+
+S real T sketch Train Ep: 3500 lr0.007984535821401871 	 Loss Classification: 0.430485 Loss T 0.243958 Method MME
+
+tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 2.7657, Accuracy: 140/352 F1 (39%)
+
+tensor([[ 30.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 115.,   0.,  ...,   0.,   1.,   0.],
+        [  0.,   0.,  45.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   4.,   0.,  ...,  16.,   0.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,  43.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   1., 190.]])
+
+Test set: Average loss: 3.1505, Accuracy: 8497/23808 F1 (35%)
+
+best acc test 35.152050 best acc val 39.772727
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 3600 lr0.007940462859307384 	 Loss Classification: 0.325294 Loss T 0.268016 Method MME
+
+S real T sketch Train Ep: 3700 lr0.007896953388873518 	 Loss Classification: 0.767177 Loss T 0.235188 Method MME
+
+S real T sketch Train Ep: 3800 lr0.007853996170872714 	 Loss Classification: 0.619315 Loss T 0.226302 Method MME
+
+S real T sketch Train Ep: 3900 lr0.00781158026956848 	 Loss Classification: 0.453681 Loss T 0.238719 Method MME
+
+S real T sketch Train Ep: 4000 lr0.007769695042409123 	 Loss Classification: 0.476572 Loss T 0.226822 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 1., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 2.7552, Accuracy: 146/352 F1 (41%)
+
+tensor([[ 38.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 137.,   0.,  ...,   0.,   5.,   0.],
+        [  0.,   0.,  44.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   9.,   0.,  ...,  24.,   0.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,  32.,   1.],
+        [  0.,   0.,   1.,  ...,   0.,   0., 191.]])
+
+Test set: Average loss: 3.1759, Accuracy: 8602/23808 F1 (36%)
+
+best acc test 36.130712 best acc val 41.477273
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 4100 lr0.007728330130142108 	 Loss Classification: 0.319389 Loss T 0.238183 Method MME
+
+S real T sketch Train Ep: 4200 lr0.007687475447329114 	 Loss Classification: 0.363813 Loss T 0.262520 Method MME
+
+S real T sketch Train Ep: 4300 lr0.0076471211732427845 	 Loss Classification: 0.524705 Loss T 0.230747 Method MME
+
+S real T sketch Train Ep: 4400 lr0.007607257743127307 	 Loss Classification: 0.408952 Loss T 0.227452 Method MME
+
+S real T sketch Train Ep: 4500 lr0.007567875839805858 	 Loss Classification: 0.336064 Loss T 0.245052 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 2.8092, Accuracy: 154/352 F1 (43%)
+
+tensor([[ 29.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 132.,   0.,  ...,   0.,   4.,   0.],
+        [  0.,   0.,  45.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   7.,   0.,  ...,  14.,   1.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  53.,   1.],
+        [  0.,   0.,   1.,  ...,   0.,   0., 199.]])
+
+Test set: Average loss: 3.2273, Accuracy: 8710/23808 F1 (36%)
+
+best acc test 36.584341 best acc val 43.750000
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 4600 lr0.007528966385618854 	 Loss Classification: 0.550355 Loss T 0.197464 Method MME
+
+S real T sketch Train Ep: 4700 lr0.007490520534677821 	 Loss Classification: 0.431669 Loss T 0.242896 Method MME
+
+S real T sketch Train Ep: 4800 lr0.007452529665420465 	 Loss Classification: 0.321825 Loss T 0.247295 Method MME
+
+S real T sketch Train Ep: 4900 lr0.007414985373453289 	 Loss Classification: 0.425393 Loss T 0.238749 Method MME
+
+S real T sketch Train Ep: 5000 lr0.007377879464668811 	 Loss Classification: 0.499924 Loss T 0.222125 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 2., 0.,  ..., 0., 0., 0.],
+        [0., 0., 3.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 2.8375, Accuracy: 150/352 F1 (42%)
+
+tensor([[ 31.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 146.,   0.,  ...,   0.,   5.,   0.],
+        [  0.,   0.,  55.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   9.,   0.,  ...,  25.,   1.,   0.],
+        [  0.,   0.,   3.,  ...,   0.,  48.,   1.],
+        [  0.,   0.,   4.,  ...,   0.,   1., 199.]])
+
+Test set: Average loss: 3.2646, Accuracy: 8728/23808 F1 (36%)
+
+best acc test 36.584341 best acc val 42.613636
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 5100 lr0.007341203948625087 	 Loss Classification: 0.445139 Loss T 0.221805 Method MME
+
+S real T sketch Train Ep: 5200 lr0.007304951032175895 	 Loss Classification: 0.444805 Loss T 0.208966 Method MME
+
+S real T sketch Train Ep: 5300 lr0.007269113113340497 	 Loss Classification: 0.668217 Loss T 0.220687 Method MME
+
+S real T sketch Train Ep: 5400 lr0.007233682775402483 	 Loss Classification: 0.442235 Loss T 0.244415 Method MME
+
+S real T sketch Train Ep: 5500 lr0.007198652781227704 	 Loss Classification: 0.498501 Loss T 0.202072 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 2., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 2.9655, Accuracy: 142/352 F1 (40%)
+
+tensor([[ 27.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 139.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  32.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   9.,   0.,  ...,  22.,   0.,   0.],
+        [  0.,   0.,   1.,  ...,   1.,  44.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   1., 189.]])
+
+Test set: Average loss: 3.2800, Accuracy: 8867/23808 F1 (37%)
+
+best acc test 36.584341 best acc val 40.340909
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 5600 lr0.007164016067791809 	 Loss Classification: 0.377449 Loss T 0.204297 Method MME
+
+S real T sketch Train Ep: 5700 lr0.0071297657409083726 	 Loss Classification: 0.601671 Loss T 0.235064 Method MME
+
+S real T sketch Train Ep: 5800 lr0.0070958950701490225 	 Loss Classification: 0.392646 Loss T 0.230833 Method MME
+
+S real T sketch Train Ep: 5900 lr0.007062397483947426 	 Loss Classification: 0.360153 Loss T 0.238675 Method MME
+
+S real T sketch Train Ep: 6000 lr0.007029266564879363 	 Loss Classification: 0.352942 Loss T 0.240953 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 2.8192, Accuracy: 149/352 F1 (42%)
+
+tensor([[ 21.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 149.,   0.,  ...,   0.,   5.,   0.],
+        [  0.,   0.,  38.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,  10.,   0.,  ...,  18.,   1.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  59.,   1.],
+        [  0.,   0.,   1.,  ...,   0.,   0., 192.]])
+
+Test set: Average loss: 3.3324, Accuracy: 8977/23808 F1 (37%)
+
+best acc test 36.584341 best acc val 42.329545
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 6100 lr0.006996496045111504 	 Loss Classification: 0.530281 Loss T 0.215773 Method MME
+
+S real T sketch Train Ep: 6200 lr0.00696407980201184 	 Loss Classification: 0.553022 Loss T 0.197645 Method MME
+
+S real T sketch Train Ep: 6300 lr0.006932011853915101 	 Loss Classification: 0.511720 Loss T 0.240715 Method MME
+
+S real T sketch Train Ep: 6400 lr0.006900286356036734 	 Loss Classification: 0.660438 Loss T 0.219450 Method MME
+
+S real T sketch Train Ep: 6500 lr0.006868897596529406 	 Loss Classification: 0.741561 Loss T 0.215671 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 1., 0.],
+        [0., 0., 0.,  ..., 0., 0., 1.]])
+
+Test set: Average loss: 3.0514, Accuracy: 146/352 F1 (41%)
+
+tensor([[ 17.,   0.,   0.,  ...,   0.,   1.,   0.],
+        [  0., 132.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  54.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   7.,   0.,  ...,  19.,   1.,   0.],
+        [  0.,   0.,   1.,  ...,   1.,  82.,   1.],
+        [  0.,   0.,   1.,  ...,   0.,   1., 201.]])
+
+Test set: Average loss: 3.4075, Accuracy: 8933/23808 F1 (37%)
+
+best acc test 36.584341 best acc val 41.477273
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 6600 lr0.006837839992676177 	 Loss Classification: 0.258504 Loss T 0.203539 Method MME
+
+S real T sketch Train Ep: 6700 lr0.006807108087214876 	 Loss Classification: 0.538340 Loss T 0.206922 Method MME
+
+S real T sketch Train Ep: 6800 lr0.006776696544788352 	 Loss Classification: 0.347646 Loss T 0.184050 Method MME
+
+S real T sketch Train Ep: 6900 lr0.006746600148515609 	 Loss Classification: 0.348202 Loss T 0.212030 Method MME
+
+S real T sketch Train Ep: 7000 lr0.006716813796678979 	 Loss Classification: 0.416664 Loss T 0.195951 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.0416, Accuracy: 147/352 F1 (41%)
+
+tensor([[ 24.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 126.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  34.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   7.,   0.,  ...,  23.,   0.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,  58.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   2., 199.]])
+
+Test set: Average loss: 3.3973, Accuracy: 9106/23808 F1 (38%)
+
+best acc test 36.584341 best acc val 41.761364
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 7100 lr0.006687332499522798 	 Loss Classification: 0.620438 Loss T 0.201800 Method MME
+
+S real T sketch Train Ep: 7200 lr0.006658151376159165 	 Loss Classification: 0.601033 Loss T 0.194316 Method MME
+
+S real T sketch Train Ep: 7300 lr0.00662926565157663 	 Loss Classification: 0.365666 Loss T 0.223079 Method MME
+
+S real T sketch Train Ep: 7400 lr0.006600670653747793 	 Loss Classification: 0.563794 Loss T 0.204407 Method MME
+
+S real T sketch Train Ep: 7500 lr0.0065723618108320175 	 Loss Classification: 0.262017 Loss T 0.210786 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.0197, Accuracy: 150/352 F1 (42%)
+
+tensor([[ 32.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  1., 137.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  31.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   6.,   0.,  ...,  21.,   2.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  33.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 203.]])
+
+Test set: Average loss: 3.4840, Accuracy: 8935/23808 F1 (37%)
+
+best acc test 36.584341 best acc val 42.613636
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 7600 lr0.006544334648469591 	 Loss Classification: 0.590910 Loss T 0.214859 Method MME
+
+S real T sketch Train Ep: 7700 lr0.006516584787163857 	 Loss Classification: 0.522775 Loss T 0.197561 Method MME
+
+S real T sketch Train Ep: 7800 lr0.006489107939747966 	 Loss Classification: 0.361164 Loss T 0.183609 Method MME
+
+S real T sketch Train Ep: 7900 lr0.0064618999089330565 	 Loss Classification: 0.508442 Loss T 0.175554 Method MME
+
+S real T sketch Train Ep: 8000 lr0.006434956584934828 	 Loss Classification: 0.483988 Loss T 0.191180 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.0685, Accuracy: 143/352 F1 (40%)
+
+tensor([[ 25.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 137.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  26.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   2.,   0.,  ...,  22.,   1.,   0.],
+        [  0.,   0.,   1.,  ...,   1.,  48.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   1., 193.]])
+
+Test set: Average loss: 3.4717, Accuracy: 9220/23808 F1 (38%)
+
+best acc test 36.584341 best acc val 40.625000
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 8100 lr0.006408273943175546 	 Loss Classification: 0.505305 Loss T 0.169294 Method MME
+
+S real T sketch Train Ep: 8200 lr0.006381848042058713 	 Loss Classification: 0.533436 Loss T 0.189856 Method MME
+
+S real T sketch Train Ep: 8300 lr0.0063556750208137005 	 Loss Classification: 0.558981 Loss T 0.209143 Method MME
+
+S real T sketch Train Ep: 8400 lr0.006329751097407787 	 Loss Classification: 0.549190 Loss T 0.205038 Method MME
+
+S real T sketch Train Ep: 8500 lr0.0063040725665231365 	 Loss Classification: 0.347175 Loss T 0.191743 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.2866, Accuracy: 151/352 F1 (42%)
+
+tensor([[ 24.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 141.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  24.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   5.,   0.,  ...,  20.,   2.,   0.],
+        [  0.,   0.,   0.,  ...,   1.,  44.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 203.]])
+
+Test set: Average loss: 3.5401, Accuracy: 9058/23808 F1 (38%)
+
+best acc test 36.584341 best acc val 42.897727
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 8600 lr0.006278635797596355 	 Loss Classification: 0.766929 Loss T 0.195101 Method MME
+
+S real T sketch Train Ep: 8700 lr0.006253437232918371 	 Loss Classification: 0.545912 Loss T 0.179085 Method MME
+
+S real T sketch Train Ep: 8800 lr0.0062284733857924735 	 Loss Classification: 0.334962 Loss T 0.191952 Method MME
+
+S real T sketch Train Ep: 8900 lr0.006203740838748417 	 Loss Classification: 0.458029 Loss T 0.176663 Method MME
+
+S real T sketch Train Ep: 9000 lr0.006179236241810624 	 Loss Classification: 0.339627 Loss T 0.193368 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 2., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.2384, Accuracy: 143/352 F1 (40%)
+
+tensor([[ 21.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 142.,   0.,  ...,   0.,   5.,   0.],
+        [  0.,   0.,  29.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   5.,   0.,  ...,  24.,   0.,   0.],
+        [  0.,   0.,   0.,  ...,   1.,  41.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   1., 202.]])
+
+Test set: Average loss: 3.6309, Accuracy: 8998/23808 F1 (37%)
+
+best acc test 36.584341 best acc val 40.625000
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 9100 lr0.006154956310818535 	 Loss Classification: 0.366650 Loss T 0.168759 Method MME
+
+S real T sketch Train Ep: 9200 lr0.0061308978257973165 	 Loss Classification: 0.394657 Loss T 0.194855 Method MME
+
+S real T sketch Train Ep: 9300 lr0.0061070576293771285 	 Loss Classification: 0.312811 Loss T 0.167080 Method MME
+
+S real T sketch Train Ep: 9400 lr0.006083432625259276 	 Loss Classification: 0.509269 Loss T 0.197022 Method MME
+
+S real T sketch Train Ep: 9500 lr0.006060019776727621 	 Loss Classification: 0.452699 Loss T 0.177147 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 1., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.2012, Accuracy: 148/352 F1 (42%)
+
+tensor([[ 27.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 145.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  42.,  ...,   0.,   0.,   0.],
+        ...,
+        [  1.,   5.,   0.,  ...,  26.,   0.,   0.],
+        [  0.,   0.,   0.,  ...,   1.,  50.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   0., 206.]])
+
+Test set: Average loss: 3.6217, Accuracy: 9172/23808 F1 (38%)
+
+best acc test 36.584341 best acc val 42.045455
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 9600 lr0.00603681610520369 	 Loss Classification: 0.463613 Loss T 0.193952 Method MME
+
+S real T sketch Train Ep: 9700 lr0.0060138186888439825 	 Loss Classification: 0.514139 Loss T 0.157129 Method MME
+
+S real T sketch Train Ep: 9800 lr0.005991024661178045 	 Loss Classification: 0.474764 Loss T 0.184403 Method MME
+
+S real T sketch Train Ep: 9900 lr0.0059684312097859115 	 Loss Classification: 0.411460 Loss T 0.164167 Method MME
+
+S real T sketch Train Ep: 10000 lr0.005946035575013605 	 Loss Classification: 0.584280 Loss T 0.143776 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.0905, Accuracy: 156/352 F1 (44%)
+
+tensor([[ 19.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 118.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  25.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ...,  27.,   0.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  46.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   0., 203.]])
+
+Test set: Average loss: 3.6783, Accuracy: 9141/23808 F1 (38%)
+
+best acc test 38.394657 best acc val 44.318182
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 10100 lr0.005923835048725393 	 Loss Classification: 0.455820 Loss T 0.201192 Method MME
+
+S real T sketch Train Ep: 10200 lr0.005901826973091593 	 Loss Classification: 0.335901 Loss T 0.164513 Method MME
+
+S real T sketch Train Ep: 10300 lr0.005880008739410735 	 Loss Classification: 0.237736 Loss T 0.173421 Method MME
+
+S real T sketch Train Ep: 10400 lr0.005858377786964935 	 Loss Classification: 0.451996 Loss T 0.162156 Method MME
+
+S real T sketch Train Ep: 10500 lr0.005836931601907399 	 Loss Classification: 0.432248 Loss T 0.141462 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 1.]])
+
+Test set: Average loss: 3.2626, Accuracy: 141/352 F1 (40%)
+
+tensor([[ 25.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 130.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  42.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   4.,   0.,  ...,  16.,   1.,   1.],
+        [  0.,   0.,   0.,  ...,   0.,  45.,   0.],
+        [  0.,   0.,   2.,  ...,   0.,   1., 209.]])
+
+Test set: Average loss: 3.6890, Accuracy: 8977/23808 F1 (37%)
+
+best acc test 38.394657 best acc val 40.056818
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 10600 lr0.005815667716181004 	 Loss Classification: 0.519758 Loss T 0.175490 Method MME
+
+S real T sketch Train Ep: 10700 lr0.005794583706466925 	 Loss Classification: 0.308861 Loss T 0.178125 Method MME
+
+S real T sketch Train Ep: 10800 lr0.005773677193162352 	 Loss Classification: 0.446855 Loss T 0.161908 Method MME
+
+S real T sketch Train Ep: 10900 lr0.005752945839386346 	 Loss Classification: 0.317553 Loss T 0.178594 Method MME
+
+S real T sketch Train Ep: 11000 lr0.005732387350012933 	 Loss Classification: 0.463545 Loss T 0.150841 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.2393, Accuracy: 146/352 F1 (41%)
+
+tensor([[ 27.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 138.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  54.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   2.,   0.,  ...,  29.,   3.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  48.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   1., 198.]])
+
+Test set: Average loss: 3.7453, Accuracy: 9012/23808 F1 (37%)
+
+best acc test 38.394657 best acc val 41.477273
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 11100 lr0.005711999470730565 	 Loss Classification: 0.352550 Loss T 0.163923 Method MME
+
+S real T sketch Train Ep: 11200 lr0.005691779987127103 	 Loss Classification: 0.421976 Loss T 0.139389 Method MME
+
+S real T sketch Train Ep: 11300 lr0.005671726723799515 	 Loss Classification: 0.505734 Loss T 0.152311 Method MME
+
+S real T sketch Train Ep: 11400 lr0.005651837543487509 	 Loss Classification: 0.450015 Loss T 0.152652 Method MME
+
+S real T sketch Train Ep: 11500 lr0.005632110346230358 	 Loss Classification: 0.321599 Loss T 0.155784 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.3179, Accuracy: 145/352 F1 (41%)
+
+tensor([[ 24.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 142.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  30.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   5.,   0.,  ...,  25.,   1.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  28.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 208.]])
+
+Test set: Average loss: 3.7148, Accuracy: 9229/23808 F1 (38%)
+
+best acc test 38.394657 best acc val 41.193182
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 11600 lr0.005612543068546177 	 Loss Classification: 0.391540 Loss T 0.159954 Method MME
+
+S real T sketch Train Ep: 11700 lr0.005593133682632953 	 Loss Classification: 0.593885 Loss T 0.164306 Method MME
+
+S real T sketch Train Ep: 11800 lr0.005573880195590681 	 Loss Classification: 0.296941 Loss T 0.138499 Method MME
+
+S real T sketch Train Ep: 11900 lr0.0055547806486639095 	 Loss Classification: 0.409177 Loss T 0.154653 Method MME
+
+S real T sketch Train Ep: 12000 lr0.005535833116504121 	 Loss Classification: 0.377991 Loss T 0.135713 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 3.3812, Accuracy: 147/352 F1 (41%)
+
+tensor([[ 26.,   0.,   0.,  ...,   0.,   1.,   0.],
+        [  0., 145.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  47.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   5.,   0.,  ...,  21.,   1.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  37.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,   0., 207.]])
+
+Test set: Average loss: 3.8573, Accuracy: 9011/23808 F1 (37%)
+
+best acc test 38.394657 best acc val 41.761364
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 12100 lr0.00551703570645129 	 Loss Classification: 0.391610 Loss T 0.134995 Method MME
+
+S real T sketch Train Ep: 12200 lr0.005498386557834078 	 Loss Classification: 0.503206 Loss T 0.151425 Method MME
+
+S real T sketch Train Ep: 12300 lr0.00547988384128807 	 Loss Classification: 0.372585 Loss T 0.166690 Method MME
+
+S real T sketch Train Ep: 12400 lr0.005461525758091539 	 Loss Classification: 0.433435 Loss T 0.138803 Method MME
+
+S real T sketch Train Ep: 12500 lr0.005443310539518174 	 Loss Classification: 0.445422 Loss T 0.159770 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.4281, Accuracy: 149/352 F1 (42%)
+
+tensor([[ 28.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 139.,   0.,  ...,   1.,   6.,   0.],
+        [  0.,   0.,  35.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   2.,   0.,  ...,  29.,   1.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  32.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   0., 203.]])
+
+Test set: Average loss: 3.7968, Accuracy: 9158/23808 F1 (38%)
+
+best acc test 38.394657 best acc val 42.329545
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 12600 lr0.005425236446206295 	 Loss Classification: 0.379433 Loss T 0.154057 Method MME
+
+S real T sketch Train Ep: 12700 lr0.005407301767544059 	 Loss Classification: 0.517539 Loss T 0.172372 Method MME
+
+S real T sketch Train Ep: 12800 lr0.005389504821070177 	 Loss Classification: 0.387685 Loss T 0.152752 Method MME
+
+S real T sketch Train Ep: 12900 lr0.005371843951889677 	 Loss Classification: 0.326243 Loss T 0.145906 Method MME
+
+S real T sketch Train Ep: 13000 lr0.0053543175321042955 	 Loss Classification: 0.359188 Loss T 0.145895 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.1852, Accuracy: 153/352 F1 (43%)
+
+tensor([[ 22.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 145.,   0.,  ...,   1.,   6.,   0.],
+        [  0.,   0.,  30.,  ...,   0.,   1.,   0.],
+        ...,
+        [  0.,   3.,   0.,  ...,  32.,   1.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  55.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   0., 191.]])
+
+Test set: Average loss: 3.7691, Accuracy: 9141/23808 F1 (38%)
+
+best acc test 38.394657 best acc val 43.465909
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 13100 lr0.005336923960257046 	 Loss Classification: 0.554585 Loss T 0.163651 Method MME
+
+S real T sketch Train Ep: 13200 lr0.0053196616607905645 	 Loss Classification: 0.321172 Loss T 0.164284 Method MME
+
+S real T sketch Train Ep: 13300 lr0.0053025290835188275 	 Loss Classification: 0.363483 Loss T 0.171915 Method MME
+
+S real T sketch Train Ep: 13400 lr0.005285524703111859 	 Loss Classification: 0.470818 Loss T 0.152726 Method MME
+
+S real T sketch Train Ep: 13500 lr0.005268647018593052 	 Loss Classification: 0.335176 Loss T 0.154124 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.4201, Accuracy: 153/352 F1 (43%)
+
+tensor([[ 25.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 135.,   0.,  ...,   3.,   6.,   0.],
+        [  0.,   0.,  42.,  ...,   3.,   0.,   0.],
+        ...,
+        [  0.,   0.,   0.,  ...,  45.,   1.,   0.],
+        [  0.,   0.,   0.,  ...,   4.,  53.,   0.],
+        [  0.,   0.,   2.,  ...,   2.,   1., 208.]])
+
+Test set: Average loss: 3.8880, Accuracy: 9209/23808 F1 (38%)
+
+best acc test 38.394657 best acc val 43.465909
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 13600 lr0.005251894552848747 	 Loss Classification: 0.426578 Loss T 0.184293 Method MME
+
+S real T sketch Train Ep: 13700 lr0.005235265852149712 	 Loss Classification: 0.441990 Loss T 0.145052 Method MME
+
+S real T sketch Train Ep: 13800 lr0.005218759485684187 	 Loss Classification: 0.374742 Loss T 0.175563 Method MME
+
+S real T sketch Train Ep: 13900 lr0.005202374045102174 	 Loss Classification: 0.443683 Loss T 0.144429 Method MME
+
+S real T sketch Train Ep: 14000 lr0.005186108144070652 	 Loss Classification: 0.379032 Loss T 0.138423 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.5363, Accuracy: 141/352 F1 (40%)
+
+tensor([[ 22.,   0.,   0.,  ...,   2.,   0.,   0.],
+        [  0., 143.,   0.,  ...,   5.,   6.,   0.],
+        [  0.,   0.,  38.,  ...,   3.,   0.,   0.],
+        ...,
+        [  0.,   2.,   0.,  ...,  52.,   0.,   0.],
+        [  0.,   0.,   0.,  ...,  12.,  31.,   0.],
+        [  0.,   0.,   1.,  ...,   3.,   0., 213.]])
+
+Test set: Average loss: 3.9873, Accuracy: 8886/23808 F1 (37%)
+
+best acc test 38.394657 best acc val 40.056818
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 14100 lr0.005169960417839403 	 Loss Classification: 0.366065 Loss T 0.148204 Method MME
+
+S real T sketch Train Ep: 14200 lr0.005153929522817161 	 Loss Classification: 0.264452 Loss T 0.156561 Method MME
+
+S real T sketch Train Ep: 14300 lr0.005138014136157799 	 Loss Classification: 0.499419 Loss T 0.156429 Method MME
+
+S real T sketch Train Ep: 14400 lr0.005122212955356274 	 Loss Classification: 0.390669 Loss T 0.141818 Method MME
+
+S real T sketch Train Ep: 14500 lr0.005106524697854057 	 Loss Classification: 0.344495 Loss T 0.163028 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.4675, Accuracy: 147/352 F1 (41%)
+
+tensor([[ 18.,   0.,   0.,  ...,   0.,   1.,   0.],
+        [  0., 149.,   0.,  ...,   0.,   6.,   0.],
+        [  0.,   0.,  48.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   6.,   0.,  ...,  22.,   1.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  54.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   1., 196.]])
+
+Test set: Average loss: 3.8894, Accuracy: 9106/23808 F1 (38%)
+
+best acc test 38.394657 best acc val 41.761364
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 14600 lr0.005090948100653781 	 Loss Classification: 0.510070 Loss T 0.146973 Method MME
+
+S real T sketch Train Ep: 14700 lr0.0050754819199428855 	 Loss Classification: 0.250908 Loss T 0.130432 Method MME
+
+S real T sketch Train Ep: 14800 lr0.005060124930725974 	 Loss Classification: 0.540002 Loss T 0.168527 Method MME
+
+S real T sketch Train Ep: 14900 lr0.00504487592646567 	 Loss Classification: 0.457337 Loss T 0.154427 Method MME
+
+S real T sketch Train Ep: 15000 lr0.005029733718731741 	 Loss Classification: 0.655564 Loss T 0.156834 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.4313, Accuracy: 149/352 F1 (42%)
+
+tensor([[ 26.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 134.,   0.,  ...,   2.,   6.,   0.],
+        [  0.,   0.,  36.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   1.,   0.,  ...,  30.,   0.,   0.],
+        [  0.,   0.,   0.,  ...,   1.,  30.,   0.],
+        [  0.,   0.,   0.,  ...,   1.,   0., 196.]])
+
+Test set: Average loss: 3.9524, Accuracy: 9034/23808 F1 (37%)
+
+best acc test 38.394657 best acc val 42.329545
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 15100 lr0.005014697136858264 	 Loss Classification: 0.407714 Loss T 0.138568 Method MME
+
+S real T sketch Train Ep: 15200 lr0.004999765027608607 	 Loss Classification: 0.469832 Loss T 0.149461 Method MME
+
+S real T sketch Train Ep: 15300 lr0.004984936254848047 	 Loss Classification: 0.565327 Loss T 0.157101 Method MME
+
+S real T sketch Train Ep: 15400 lr0.004970209699223787 	 Loss Classification: 0.144933 Loss T 0.150349 Method MME
+
+S real T sketch Train Ep: 15500 lr0.0049555842578521995 	 Loss Classification: 0.363081 Loss T 0.135599 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 3.]])
+
+Test set: Average loss: 3.5687, Accuracy: 145/352 F1 (41%)
+
+tensor([[ 20.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 138.,   0.,  ...,   1.,   5.,   0.],
+        [  0.,   0.,  55.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   2.,   1.,  ...,  25.,   1.,   0.],
+        [  0.,   0.,   0.,  ...,   0.,  35.,   0.],
+        [  0.,   0.,   2.,  ...,   0.,   1., 216.]])
+
+Test set: Average loss: 3.9894, Accuracy: 8891/23808 F1 (37%)
+
