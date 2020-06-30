@@ -337,6 +337,9 @@ def main():
                                                 args.target, step)))
 
 
+
+    # defining the function for in training validation and testing
+
     def test(loader):
         G.eval()
         F1.eval()
@@ -382,11 +385,61 @@ def main():
                     100. * correct / size))
         return test_loss.data, 100. * float(correct) / size
 
+    # defining the function for inference which is similar to the testing function as above but with some additional functionality for calculating the distances between the class prototypes and the predicted testing samples
 
+    def infer(loader):
+            G.eval()
+            F1.eval()
+            test_loss = 0
+            correct = 0
+            size = 0
+            num_class = len(class_list)
+            output_all = np.zeros((0, num_class))
+
+            # Setting the loss function to be used for the classification loss
+            if args.loss == 'CE':
+                criterion = nn.CrossEntropyLoss().to(device)
+            if args.loss == 'FL':
+                criterion = FocalLoss(alpha = 1, gamma = 1).to(device)
+            if args.loss == 'CBFL':
+                # Calculating the list having the number of examples per class which is going to be used in the CB focal loss
+                beta = 0.99
+                effective_num = 1.0 - np.power(beta, class_num_list)
+                per_cls_weights = (1.0 - beta) / np.array(effective_num)
+                per_cls_weights = per_cls_weights / np.sum(per_cls_weights) * len(class_num_list)
+                per_cls_weights = torch.FloatTensor(per_cls_weights).to(device)
+                criterion = CBFocalLoss(weight=per_cls_weights, gamma=0.5).to(device)
+
+            confusion_matrix = torch.zeros(num_class, num_class)
+            with torch.no_grad():
+                for batch_idx, data_t in enumerate(loader):
+                    im_data_t.data.resize_(data_t[0].size()).copy_(data_t[0])
+                    gt_labels_t.data.resize_(data_t[1].size()).copy_(data_t[1])
+                    feat = G(im_data_t)
+                    output1 = F1(feat)
+                    output_all = np.r_[output_all, output1.data.cpu().numpy()]
+                    size += im_data_t.size(0)
+                    pred1 = output1.data.max(1)[1]
+                    for t, p in zip(gt_labels_t.view(-1), pred1.view(-1)):
+                        confusion_matrix[t.long(), p.long()] += 1
+                    correct += pred1.eq(gt_labels_t.data).cpu().sum()
+                    test_loss += criterion(output1, gt_labels_t) / len(loader)
+            np.save("cf_target.npy",confusion_matrix)
+            print(confusion_matrix)
+            print('\nTest set: Average loss: {:.4f}, '
+                'Accuracy: {}/{} F1 ({:.0f}%)\n'.
+                format(test_loss, correct, size,
+                        100. * correct / size))
+            return test_loss.data, 100. * float(correct) / size
+
+
+
+
+    # choosing the mode of the model - whether to be used for training or for inference
     if args.mode == 'train':
         train()
     if args.mode == 'infer':
-        infer()
+        infer(target_loader_test)
 
 
 # Invoking the main function here
