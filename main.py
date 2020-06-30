@@ -410,9 +410,10 @@ def main():
                 criterion = CBFocalLoss(weight=per_cls_weights, gamma=0.5).to(device)
             # defining a nested list to store the cosine similarity (or distances) of the vectors from the class prototypes
             class_dist_list = []
-            empty_dists = []
             for i in range(num_class):
+                empty_dists = []
                 class_dist_list.append(empty_dists)
+   
             confusion_matrix = torch.zeros(num_class, num_class)
             with torch.no_grad():
                 for batch_idx, data_t in enumerate(loader):
@@ -431,31 +432,18 @@ def main():
                     pred1 = pred1.cpu().numpy()
                     dists = output1.data.max(1)[0]
                     dists = dists.cpu().numpy()
+                
                     # forming the lists of the distances of the predicted labels and the class prototype 
-                    #class_dist_list.append(dists)
-                    #class_dist_list_idx.append(pred1)
-                    for label in pred
-                    print("a")
+                    for label,dist in zip(pred1,dists):
+                        label = int(label)
+                        class_dist_list[label].append(dist)
                   
-            class_dist = np.array(class_dist_list).flatten()
-            class_dist_idx = np.array(class_dist_list_idx).flatten()
-            idxs = class_dist_idx.argsort()
-            # sorting the arrays accoring to the class label
-            class_dist = class_dist[idxs]
-            class_dist_idx = class_dist_idx[idxs] 
-            print(class_dist)
-
-
-            # making a nested list t 
-
-
-
-
-
-
-
-
-
+            # sorting the distances in ascending order for each of the classes
+            summ = 0
+            for class_ in range(len(class_dist_list)):
+                class_dist_list[class_].sort(reverse = True)
+                print(class_dist_list[class_])
+                    
 
             print('\nTest set: Average loss: {:.4f}, '
                 'Accuracy: {}/{} F1 ({:.0f}%)\n'.
