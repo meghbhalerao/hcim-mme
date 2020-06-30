@@ -155,14 +155,13 @@ def main():
 
     # If the mode is inference then load the pretrained network
     if args.mode == 'infer':
-        G = torch.load(args.loadG)
-        F1 = torch.load(args.loadF)
+        G.load_state_dict(torch.load(args.loadG))
+        F1.load_state_dict(torch.load(args.loadF))
      
     G.to(device)
     F1.to(device)
 
 
-   
     im_data_s = torch.FloatTensor(1)
     im_data_t = torch.FloatTensor(1)
     im_data_tu = torch.FloatTensor(1)
@@ -409,23 +408,55 @@ def main():
                 per_cls_weights = per_cls_weights / np.sum(per_cls_weights) * len(class_num_list)
                 per_cls_weights = torch.FloatTensor(per_cls_weights).to(device)
                 criterion = CBFocalLoss(weight=per_cls_weights, gamma=0.5).to(device)
-
+            # defining a nested list to store the cosine similarity (or distances) of the vectors from the class prototypes
+            class_dist_list = []
+            empty_dists = []
+            for i in range(num_class):
+                class_dist_list.append(empty_dists)
             confusion_matrix = torch.zeros(num_class, num_class)
             with torch.no_grad():
                 for batch_idx, data_t in enumerate(loader):
                     im_data_t.data.resize_(data_t[0].size()).copy_(data_t[0])
                     gt_labels_t.data.resize_(data_t[1].size()).copy_(data_t[1])
                     feat = G(im_data_t)
-                    output1 = F1(feat)
+                    output1 = F1(feat) 
                     output_all = np.r_[output_all, output1.data.cpu().numpy()]
                     size += im_data_t.size(0)
                     pred1 = output1.data.max(1)[1]
+         			# filling the elements of the confusion matrix          
                     for t, p in zip(gt_labels_t.view(-1), pred1.view(-1)):
                         confusion_matrix[t.long(), p.long()] += 1
                     correct += pred1.eq(gt_labels_t.data).cpu().sum()
                     test_loss += criterion(output1, gt_labels_t) / len(loader)
-            np.save("cf_target.npy",confusion_matrix)
-            print(confusion_matrix)
+                    pred1 = pred1.cpu().numpy()
+                    dists = output1.data.max(1)[0]
+                    dists = dists.cpu().numpy()
+                    # forming the lists of the distances of the predicted labels and the class prototype 
+                    #class_dist_list.append(dists)
+                    #class_dist_list_idx.append(pred1)
+                    for label in pred
+                    print("a")
+                  
+            class_dist = np.array(class_dist_list).flatten()
+            class_dist_idx = np.array(class_dist_list_idx).flatten()
+            idxs = class_dist_idx.argsort()
+            # sorting the arrays accoring to the class label
+            class_dist = class_dist[idxs]
+            class_dist_idx = class_dist_idx[idxs] 
+            print(class_dist)
+
+
+            # making a nested list t 
+
+
+
+
+
+
+
+
+
+
             print('\nTest set: Average loss: {:.4f}, '
                 'Accuracy: {}/{} F1 ({:.0f}%)\n'.
                 format(test_loss, correct, size,
