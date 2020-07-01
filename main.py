@@ -1,6 +1,7 @@
 from __future__ import print_function
 import argparse
 import os
+import math
 import numpy as np
 import torch
 import torch.nn as nn
@@ -415,6 +416,7 @@ def main():
                 class_dist_list.append(empty_dists)
    
             confusion_matrix = torch.zeros(num_class, num_class)
+            # iterating through the elements of the batch in the dataloader
             with torch.no_grad():
                 for batch_idx, data_t in enumerate(loader):
                     im_data_t.data.resize_(data_t[0].size()).copy_(data_t[0])
@@ -438,28 +440,35 @@ def main():
                         label = int(label)
                         class_dist_list[label].append(dist)
                   
-            # sorting the distances in ascending order for each of the classes
+            # sorting the distances in ascending order for each of the classes, also finding a threshold for similarity of each class
             summ = 0
+            class_dist_threshold_list = []
             for class_ in range(len(class_dist_list)):
-                class_dist_list[class_].sort(reverse = True)
-                print(class_dist_list[class_])
-                    
+                class_dist_list[class_].sort()
+                l = len(class_dist_list[class_])
+                tenth = l/10
+                idx_tenth = math.ceil(tenth)
+                class_dist_threshold_list.append(class_dist_list[class_][idx_tenth])
+                     
+                         
 
             print('\nTest set: Average loss: {:.4f}, '
                 'Accuracy: {}/{} F1 ({:.0f}%)\n'.
                 format(test_loss, correct, size,
                         100. * correct / size))
-            return test_loss.data, 100. * float(correct) / size
+            return test_loss.data, 100. * float(correct) / size, class_dist_threshold_list 
 
 
 
 
     # choosing the mode of the model - whether to be used for training or for inference
     if args.mode == 'train':
+        print("Training the model...")
         train()
     if args.mode == 'infer':
-        infer(target_loader_test)
-
+        print("Infering from the model...")
+        _, _, class_dist_threshold_list = infer(target_loader_test)
+        print(class_dist_threshold_list)
 
 # Invoking the main function here
 if __name__ == "__main__":
