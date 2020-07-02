@@ -35,8 +35,29 @@ def entropy(F1, feat, lamda, eta=1.0):
     return loss_ent
 
 
-def adentropy(F1, feat, lamda, eta=1.0):
+def adentropy(F1, feat, lamda, class_dist_threshold_list, eta=1.0):
     out_t1 = F1(feat, reverse=True, eta=eta)
+    if class_dist_threshold_list is not None:
+        # predicted class of the output
+        pred_class_list = out_t1.data.max(1)[1]
+        out_t1_max_vals = out_t1.data.max(1)[0]
+        #print(pred_class_list, out_t1_max_vals)
+        # weights for each of the samples for entropy maximization step
+        weight_list = []
+        for pred, val in zip(pred_class_list, out_t1_max_vals):
+            if(val < class_dist_threshold_list[int(pred.cpu().data.item())]):
+                weight_list.append(1.2)
+            else:
+                weight_list.append(1) 
+        weight_list = torch.tensor(np.array(weight_list)).double().cuda()
+        out_t1 = F.softmax(out_t1,dim=1)
+        #print(torch.sum(out_t1 * (torch.log(out_t1 + 1e-5)), 1).double().dtype)
+        #print(torch.mean(weight_list * torch.sum(out_t1 * (torch.log(out_t1 + 1e-5)), 1).double()).dtype)
+        
+        loss_adent = lamda * torch.mean(weight_list * torch.sum(out_t1 * (torch.log(out_t1 + 1e-5)), 1).double())
+        return loss_adent
+        
+    # the standard loss calculation procedure without any weigths for the samples 
     out_t1 = F.softmax(out_t1,dim=1)
     loss_adent = lamda * torch.mean(torch.sum(out_t1 *
                                               (torch.log(out_t1 + 1e-5)), 1))

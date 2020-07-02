@@ -158,7 +158,8 @@ def main():
     if args.mode == 'infer':
         G.load_state_dict(torch.load(args.loadG))
         F1.load_state_dict(torch.load(args.loadF))
-     
+        print("Loaded pretrained model weights")         
+
     G.to(device)
     F1.to(device)
 
@@ -193,7 +194,7 @@ def main():
         os.mkdir(args.checkpath)
 
 
-    def train():
+    def train(class_dist_threshold_list):
         G.train()
         F1.train()
         optimizer_g = optim.SGD(params, momentum=0.9,
@@ -276,7 +277,7 @@ def main():
                     optimizer_f.step()
                     optimizer_g.step()
                 elif args.method == 'MME':
-                    loss_t = adentropy(F1, output, args.lamda)
+                    loss_t = adentropy(F1, output,args.lamda,class_dist_threshold_list)
                     loss_t.backward()
                     optimizer_f.step()
                     optimizer_g.step()
@@ -451,7 +452,6 @@ def main():
                 class_dist_threshold_list.append(class_dist_list[class_][idx_tenth])
                      
                          
-
             print('\nTest set: Average loss: {:.4f}, '
                 'Accuracy: {}/{} F1 ({:.0f}%)\n'.
                 format(test_loss, correct, size,
@@ -464,12 +464,13 @@ def main():
     # choosing the mode of the model - whether to be used for training or for inference
     if args.mode == 'train':
         print("Training the model...")
-        train()
+        train(None)
     if args.mode == 'infer':
         print("Infering from the model...")
         _, _, class_dist_threshold_list = infer(target_loader_test)
-        print(class_dist_threshold_list)
-
+        print("Starting model retraining using weights for entropy maximization...")
+        train(class_dist_threshold_list)
+    
 # Invoking the main function here
 if __name__ == "__main__":
     main()
