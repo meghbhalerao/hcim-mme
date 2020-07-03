@@ -1,0 +1,61 @@
+Dataset multi Source real Target sketch Labeled num perclass 3 Network alexnet
+126 classes in this dataset
+Device: cuda  Loss: CBFL  Attributes: glove_anurag
+Using: Predictor_attributes
+attribute shape is:  torch.Size([126, 50])
+Training the model...
+S real T sketch Train Ep: 0 lr0.01 	 Loss Classification: 7.267583 Loss T 0.241917 Method MME
+
+S real T sketch Train Ep: 100 lr0.009925650290240803 	 Loss Classification: 1.253267 Loss T 0.246090 Method MME
+
+S real T sketch Train Ep: 200 lr0.009852577760521605 	 Loss Classification: 1.215001 Loss T 0.213613 Method MME
+
+S real T sketch Train Ep: 300 lr0.009780748269686728 	 Loss Classification: 1.049003 Loss T 0.243520 Method MME
+
+S real T sketch Train Ep: 400 lr0.009710128909124701 	 Loss Classification: 1.016055 Loss T 0.229799 Method MME
+
+S real T sketch Train Ep: 500 lr0.00964068794694323 	 Loss Classification: 0.798638 Loss T 0.229007 Method MME
+
+tensor([[2., 0., 0.,  ..., 0., 0., 0.],
+        [0., 2., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 1., 0.],
+        [0., 0., 0.,  ..., 0., 0., 2.]])
+
+Test set: Average loss: 3.4055, Accuracy: 112/352 F1 (31%)
+
+tensor([[ 27.,   0.,   0.,  ...,   0.,   0.,   0.],
+        [  0., 129.,   0.,  ...,   2.,   0.,   0.],
+        [  0.,   0.,  53.,  ...,   0.,   0.,   0.],
+        ...,
+        [  0.,   4.,   1.,  ...,  18.,   0.,   0.],
+        [  0.,   1.,  10.,  ...,   1.,  15.,   0.],
+        [  0.,   0.,   1.,  ...,   0.,   0., 179.]])
+
+Test set: Average loss: 3.9417, Accuracy: 5982/23808 F1 (25%)
+
+best acc test 25.126008 best acc val 31.818182
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+saving model
+S real T sketch Train Ep: 600 lr0.00957239477517603 	 Loss Classification: 0.612911 Loss T 0.233717 Method MME
+
+S real T sketch Train Ep: 700 lr0.009505219859830012 	 Loss Classification: 0.556114 Loss T 0.236030 Method MME
+
+S real T sketch Train Ep: 800 lr0.009439134693595126 	 Loss Classification: 0.593726 Loss T 0.224641 Method MME
+
+S real T sketch Train Ep: 900 lr0.009374111751051751 	 Loss Classification: 0.623466 Loss T 0.228255 Method MME
+
+S real T sketch Train Ep: 1000 lr0.009310124446222227 	 Loss Classification: 0.984756 Loss T 0.230877 Method MME
+
+tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 3., 0.,  ..., 0., 0., 0.],
+        [0., 0., 2.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 1., 0.],
+        [0., 0., 0.,  ..., 0., 0., 1.]])
+
+Test set: Average loss: 3.4281, Accuracy: 117/352 F1 (33%)
+
