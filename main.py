@@ -10,7 +10,7 @@ import torch.optim as optim
 from torch.autograd import Variable
 from model.resnet import resnet34
 from model.basenet import AlexNetBase, VGGBase, Predictor, Predictor_deep, Predictor_deep_attributes, Predictor_attributes
-from utils.utils import weights_init
+from utils.utils import weights_init, save_mymodel, save_checkpoint
 from utils.lr_schedule import inv_lr_scheduler
 from utils.return_dataset import return_dataset
 from utils.loss import entropy, adentropy, FocalLoss, CBFocalLoss
@@ -71,8 +71,7 @@ def main():
                         help='type of classification predictor - 0 for shallow, 1 for deep')
     parser.add_argument('--mode', type=str, default='train', choices=['train', 'infer'], help = 'mode of script train or infer')
     # this argument is valid only if the mode is infer
-    parser.add_argument('--loadF', type=str, help = 'path to the F model')
-    parser.add_argument('--loadG', type=str, help = 'path to the G model')
+    parser.add_argument('--model_path', type=str, help = 'path to the checkpoint of the model')
 
     args = parser.parse_args()
     print('Dataset %s Source %s Target %s Labeled num perclass %s Network %s' %
@@ -156,8 +155,10 @@ def main():
 
     # If the mode is inference then load the pretrained network
     if args.mode == 'infer':
-        G.load_state_dict(torch.load(args.loadG))
-        F1.load_state_dict(torch.load(args.loadF))
+        # loading the model checkpoint
+        main_dict = torch.load(args.model_path)	
+        G.load_state_dict(main_dict['G_state_dict'])
+        F1.load_state_dict(main_dict['F_state_dict'])
         print("Loaded pretrained model weights")         
 
     G.to(device)
@@ -243,6 +244,7 @@ def main():
             optimizer_f = inv_lr_scheduler(param_lr_f, optimizer_f, step,
                                         init_lr=args.lr)
             lr = optimizer_f.param_groups[0]['lr']
+            # condition for restarting the iteration for each of the data loaders 
             if step % len_train_target == 0:
                 data_iter_t = iter(target_loader)
             if step % len_train_target_semi == 0:
@@ -322,22 +324,19 @@ def main():
                                                             acc_val))
                 G.train()
                 F1.train()
+                #saving model as a checkpoint dict having many things
                 if args.save_check:
                     print('saving model')
-                    torch.save(G.state_dict(),
-                            os.path.join(args.checkpath,
-                                            "G_iter_model_{}_{}_"
-                                            "to_{}_step_{}.pth.tar".
-                                            format(args.method, args.source,
-                                                args.target, step)))
-                    torch.save(F1.state_dict(),
-                            os.path.join(args.checkpath,
-                                            "F1_iter_model_{}_{}_"
-                                            "to_{}_step_{}.pth.tar".
-                                            format(args.method, args.source,
-                                                args.target, step)))
-
-
+                    is_best = True if counter==0 else False
+                    save_mymodel(args, {
+                     'step': step,
+                     'arch': args.net,
+                     'G_state_dict': G.state_dict(),
+                     'F1_state_dict': F1.state_dict(),
+                     'best_acc_test': best_acc_test,
+                     'optimizer_g' : optimizer_g.state_dict(),
+                     'optimizer_f' : optimizer_f.state_dict(),
+                     }, is_best)	
 
     # defining the function for in training validation and testing
 
@@ -379,7 +378,7 @@ def main():
                 correct += pred1.eq(gt_labels_t.data).cpu().sum()
                 test_loss += criterion(output1, gt_labels_t) / len(loader)
         np.save("cf_target.npy",confusion_matrix)
-        print(confusion_matrix)
+        #print(confusion_matrix)
         print('\nTest set: Average loss: {:.4f}, '
             'Accuracy: {}/{} F1 ({:.0f}%)\n'.
             format(test_loss, correct, size,
@@ -453,7 +452,7 @@ def main():
                      
                          
             print('\nTest set: Average loss: {:.4f}, '
-                'Accuracy: {}/{} F1 ({:.0f}%)\n'.
+                'Accuracy: {}/{} F1 ({:.2f}%)\n'.
                 format(test_loss, correct, size,
                         100. * correct / size))
             return test_loss.data, 100. * float(correct) / size, class_dist_threshold_list 
