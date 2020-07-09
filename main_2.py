@@ -155,7 +155,7 @@ def main():
 
      
     # loading the model checkpoint - and printing some parameters relating to the checkpoints
-    main_dict = torch.load(args.checkpath + "/" + args.method + "_" + args.source + "_" + args.target + ".ckpt.best.pth.tar")	
+    main_dict = torch.load(args.checkpath + "/" + args.net + "_" + args.method + "_" + args.source + "_" + args.target + ".ckpt.best.pth.tar")	
     G.load_state_dict(main_dict['G_state_dict'])
     F1.load_state_dict(main_dict['F1_state_dict'])
     print("Loaded pretrained model weights")  
@@ -320,8 +320,8 @@ def main():
                 loss_test, acc_test = test(target_loader_test)
                 G.train()
                 F1.train()
-                if acc_val >= best_acc:
-                    best_acc = acc_val
+                if acc_test >= best_acc:
+                    best_acc = acc_test
                     best_acc_test = acc_test
                     counter = 0
                 else:

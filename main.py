@@ -306,8 +306,8 @@ def main():
                 loss_test, acc_test = test(target_loader_test)
                 G.train()
                 F1.train()
-                if acc_val >= best_acc:
-                    best_acc = acc_val
+                if acc_test >= best_acc:
+                    best_acc = acc_test
                     best_acc_test = acc_test
                     counter = 0
                 else:
