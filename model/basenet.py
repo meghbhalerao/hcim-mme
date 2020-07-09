@@ -83,9 +83,11 @@ class Predictor_deep_attributes(nn.Module):
 
     def forward(self, x, reverse=False, eta=0.1):
         x = self.fc1(x)
-        x = self.fc2(x)
+#        x = self.fc2(x)
         if reverse:
             x = grad_reverse(x, eta)
+#        x = self.fc1(x)
+        x = self.fc2(x)
         x = F.normalize(x)
         x_out = self.fc3(x)/self.temp
         return x_out
