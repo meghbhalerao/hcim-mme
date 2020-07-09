@@ -1,7 +1,7 @@
 ######START OF EMBEDDED SGE COMMANDS ##########################
 #$ -S /bin/bash
 #$ -cwd
-#$ -N stage2_cbfl_resnet34_fasttext
+#$ -N cbfl_alexnet_infer_train
 #$ -M 16ee234.megh@nitk.edu.in #### email to nofity with following options/scenarios
 #$ -m a #### send mail in case the job is aborted
 #$ -m b #### send mail when job begins
@@ -18,4 +18,4 @@ module load python/anaconda/3
 module unload gcc
 module load gcc/5.2.0
 cd ..
-python main_2.py --method MME --dataset multi --source real --target sketch --net resnet34 --attribute fasttext_anurag --dim 300 --loss CBFL --deep 1 --patience 10 --mode train
+python main.py --method MME --dataset multi --source real --target sketch --net alexnet --attribute glove_anurag --dim 50 --loss CBFL --deep 0 --patience 10 --mode infer --loadG save_model_ssda/G_iter_model_MME_real_to_sketch_step_16000.pth.tar --loadF save_model_ssda/F1_iter_model_MME_real_to_sketch_step_16000.pth.tar

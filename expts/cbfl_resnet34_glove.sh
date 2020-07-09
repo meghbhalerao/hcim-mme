@@ -18,4 +18,4 @@ module load python/anaconda/3
 module unload gcc
 module load gcc/5.2.0
 cd ..
-python main.py --method MME --dataset multi --source real --target sketch --net resnet34 --attribute glove_anurag --dim 50 --loss CBFL --deep 1 --patience 10 --mode train --save_check
+python main.py --method MME --dataset multi --source real --target sketch --net resnet34 --attribute glove_anurag --dim 50 --loss CBFL --deep 1 --patience 10 --mode train #--save_check

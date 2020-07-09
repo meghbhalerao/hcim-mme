@@ -1,0 +1,353 @@
+Dataset multi Source real Target sketch Labeled num perclass 3 Network alexnet
+126 classes in this dataset
+Device: cuda  Loss: CBFL  Attributes: glove_anurag
+Using: Predictor_attributes
+attribute shape is:  torch.Size([126, 50])
+Loaded pretrained model weights
+Infering from the model...
+
+Test set: Average loss: 3.1682, Accuracy: 9568/23808 F1 (40.00%)
+
+Starting model retraining using weights for entropy maximization...
+S real T sketch Train Ep: 0 lr0.01 	 Loss Classification: 0.441777 Loss T 0.311834 Method MME
+
+S real T sketch Train Ep: 100 lr0.009925650290240803 	 Loss Classification: 0.216336 Loss T 0.269225 Method MME
+
+S real T sketch Train Ep: 200 lr0.009852577760521605 	 Loss Classification: 0.436028 Loss T 0.305092 Method MME
+
+S real T sketch Train Ep: 300 lr0.009780748269686728 	 Loss Classification: 0.436053 Loss T 0.276087 Method MME
+
+S real T sketch Train Ep: 400 lr0.009710128909124701 	 Loss Classification: 0.451515 Loss T 0.312146 Method MME
+
+S real T sketch Train Ep: 500 lr0.00964068794694323 	 Loss Classification: 0.325601 Loss T 0.231994 Method MME
+
+
+Test set: Average loss: 2.8852, Accuracy: 150/352 F1 (42%)
+
+
+Test set: Average loss: 3.1901, Accuracy: 9355/23808 F1 (39%)
+
+best acc test 39.293515 best acc val 42.613636
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 600 lr0.00957239477517603 	 Loss Classification: 0.629261 Loss T 0.323104 Method MME
+
+S real T sketch Train Ep: 700 lr0.009505219859830012 	 Loss Classification: 0.478208 Loss T 0.280609 Method MME
+
+S real T sketch Train Ep: 800 lr0.009439134693595126 	 Loss Classification: 0.447006 Loss T 0.328513 Method MME
+
+S real T sketch Train Ep: 900 lr0.009374111751051751 	 Loss Classification: 0.617363 Loss T 0.346034 Method MME
+
+S real T sketch Train Ep: 1000 lr0.009310124446222227 	 Loss Classification: 0.590649 Loss T 0.337699 Method MME
+
+
+Test set: Average loss: 2.8485, Accuracy: 149/352 F1 (42%)
+
+
+Test set: Average loss: 3.1515, Accuracy: 9253/23808 F1 (38%)
+
+best acc test 39.293515 best acc val 42.329545
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 1100 lr0.00924714709232377 	 Loss Classification: 0.359533 Loss T 0.354225 Method MME
+
+S real T sketch Train Ep: 1200 lr0.009185154863590003 	 Loss Classification: 0.454902 Loss T 0.362917 Method MME
+
+S real T sketch Train Ep: 1300 lr0.00912412375903735 	 Loss Classification: 0.486828 Loss T 0.323096 Method MME
+
+S real T sketch Train Ep: 1400 lr0.009064030568061049 	 Loss Classification: 0.584943 Loss T 0.294327 Method MME
+
+S real T sketch Train Ep: 1500 lr0.009004852837753237 	 Loss Classification: 0.582283 Loss T 0.327079 Method MME
+
+
+Test set: Average loss: 2.8840, Accuracy: 150/352 F1 (42%)
+
+
+Test set: Average loss: 3.1994, Accuracy: 9174/23808 F1 (38%)
+
+best acc test 38.533266 best acc val 42.613636
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 1600 lr0.008946568841842816 	 Loss Classification: 0.605535 Loss T 0.369523 Method MME
+
+S real T sketch Train Ep: 1700 lr0.008889157551163433 	 Loss Classification: 0.511003 Loss T 0.372157 Method MME
+
+S real T sketch Train Ep: 1800 lr0.008832598605562044 	 Loss Classification: 0.476087 Loss T 0.307477 Method MME
+
+S real T sketch Train Ep: 1900 lr0.008776872287166303 	 Loss Classification: 0.339850 Loss T 0.284270 Method MME
+
+S real T sketch Train Ep: 2000 lr0.008721959494934213 	 Loss Classification: 0.439149 Loss T 0.299266 Method MME
+
+
+Test set: Average loss: 2.7943, Accuracy: 155/352 F1 (44%)
+
+
+Test set: Average loss: 3.2341, Accuracy: 9139/23808 F1 (38%)
+
+best acc test 38.386257 best acc val 44.034091
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 2100 lr0.008667841720414475 	 Loss Classification: 0.374730 Loss T 0.285779 Method MME
+
+S real T sketch Train Ep: 2200 lr0.008614501024650454 	 Loss Classification: 0.354692 Loss T 0.321240 Method MME
+
+S real T sketch Train Ep: 2300 lr0.008561920016164943 	 Loss Classification: 0.370851 Loss T 0.260987 Method MME
+
+S real T sketch Train Ep: 2400 lr0.008510081829966844 	 Loss Classification: 0.334570 Loss T 0.341848 Method MME
+
+S real T sketch Train Ep: 2500 lr0.008458970107524513 	 Loss Classification: 0.224674 Loss T 0.356326 Method MME
+
+
+Test set: Average loss: 2.9216, Accuracy: 150/352 F1 (42%)
+
+
+Test set: Average loss: 3.1995, Accuracy: 9326/23808 F1 (39%)
+
+best acc test 38.386257 best acc val 42.613636
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 2600 lr0.008408568977653933 	 Loss Classification: 0.413691 Loss T 0.309753 Method MME
+
+S real T sketch Train Ep: 2700 lr0.00835886303827305 	 Loss Classification: 0.447611 Loss T 0.286437 Method MME
+
+S real T sketch Train Ep: 2800 lr0.008309837338976545 	 Loss Classification: 0.351442 Loss T 0.330007 Method MME
+
+S real T sketch Train Ep: 2900 lr0.008261477364388068 	 Loss Classification: 0.302696 Loss T 0.296522 Method MME
+
+S real T sketch Train Ep: 3000 lr0.008213769018249545 	 Loss Classification: 0.433118 Loss T 0.334810 Method MME
+
+
+Test set: Average loss: 2.7852, Accuracy: 155/352 F1 (44%)
+
+
+Test set: Average loss: 3.1554, Accuracy: 9413/23808 F1 (39%)
+
+best acc test 39.537130 best acc val 44.034091
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 3100 lr0.008166698608209509 	 Loss Classification: 0.450417 Loss T 0.267704 Method MME
+
+S real T sketch Train Ep: 3200 lr0.008120252831274708 	 Loss Classification: 0.831629 Loss T 0.288403 Method MME
+
+S real T sketch Train Ep: 3300 lr0.008074418759891278 	 Loss Classification: 0.432959 Loss T 0.294895 Method MME
+
+S real T sketch Train Ep: 3400 lr0.008029183828623731 	 Loss Classification: 0.309006 Loss T 0.327859 Method MME
+
+S real T sketch Train Ep: 3500 lr0.007984535821401871 	 Loss Classification: 0.532912 Loss T 0.307242 Method MME
+
+
+Test set: Average loss: 2.9772, Accuracy: 145/352 F1 (41%)
+
+
+Test set: Average loss: 3.1999, Accuracy: 9394/23808 F1 (39%)
+
+best acc test 39.537130 best acc val 41.193182
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 3600 lr0.007940462859307384 	 Loss Classification: 0.379797 Loss T 0.355290 Method MME
+
+S real T sketch Train Ep: 3700 lr0.007896953388873518 	 Loss Classification: 0.474244 Loss T 0.316085 Method MME
+
+S real T sketch Train Ep: 3800 lr0.007853996170872714 	 Loss Classification: 0.176416 Loss T 0.292679 Method MME
+
+S real T sketch Train Ep: 3900 lr0.00781158026956848 	 Loss Classification: 0.376153 Loss T 0.314765 Method MME
+
+S real T sketch Train Ep: 4000 lr0.007769695042409123 	 Loss Classification: 0.546518 Loss T 0.315535 Method MME
+
+
+Test set: Average loss: 2.6781, Accuracy: 164/352 F1 (46%)
+
+
+Test set: Average loss: 3.1561, Accuracy: 9466/23808 F1 (39%)
+
+best acc test 39.759745 best acc val 46.590909
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 4100 lr0.007728330130142108 	 Loss Classification: 0.298794 Loss T 0.461074 Method MME
+
+S real T sketch Train Ep: 4200 lr0.007687475447329114 	 Loss Classification: 0.733150 Loss T 0.297606 Method MME
+
+S real T sketch Train Ep: 4300 lr0.0076471211732427845 	 Loss Classification: 0.473988 Loss T 0.309084 Method MME
+
+S real T sketch Train Ep: 4400 lr0.007607257743127307 	 Loss Classification: 0.448010 Loss T 0.332439 Method MME
+
+S real T sketch Train Ep: 4500 lr0.007567875839805858 	 Loss Classification: 0.438364 Loss T 0.267156 Method MME
+
+
+Test set: Average loss: 2.7887, Accuracy: 157/352 F1 (44%)
+
+
+Test set: Average loss: 3.2498, Accuracy: 9309/23808 F1 (39%)
+
+best acc test 39.759745 best acc val 44.602273
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 4600 lr0.007528966385618854 	 Loss Classification: 0.415415 Loss T 0.307504 Method MME
+
+S real T sketch Train Ep: 4700 lr0.007490520534677821 	 Loss Classification: 0.347459 Loss T 0.296424 Method MME
+
+S real T sketch Train Ep: 4800 lr0.007452529665420465 	 Loss Classification: 0.374229 Loss T 0.336325 Method MME
+
+S real T sketch Train Ep: 4900 lr0.007414985373453289 	 Loss Classification: 0.470763 Loss T 0.311124 Method MME
+
+S real T sketch Train Ep: 5000 lr0.007377879464668811 	 Loss Classification: 0.491025 Loss T 0.295686 Method MME
+
+
+Test set: Average loss: 2.9215, Accuracy: 147/352 F1 (41%)
+
+
+Test set: Average loss: 3.2072, Accuracy: 9556/23808 F1 (40%)
+
+best acc test 39.759745 best acc val 41.761364
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 5100 lr0.007341203948625087 	 Loss Classification: 0.538726 Loss T 0.363511 Method MME
+
+S real T sketch Train Ep: 5200 lr0.007304951032175895 	 Loss Classification: 0.538601 Loss T 0.300102 Method MME
+
+S real T sketch Train Ep: 5300 lr0.007269113113340497 	 Loss Classification: 0.436777 Loss T 0.322021 Method MME
+
+S real T sketch Train Ep: 5400 lr0.007233682775402483 	 Loss Classification: 0.436896 Loss T 0.277588 Method MME
+
+S real T sketch Train Ep: 5500 lr0.007198652781227704 	 Loss Classification: 0.299658 Loss T 0.331662 Method MME
+
+
+Test set: Average loss: 2.8058, Accuracy: 158/352 F1 (44%)
+
+
+Test set: Average loss: 3.2522, Accuracy: 9386/23808 F1 (39%)
+
+best acc test 39.759745 best acc val 44.886364
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 5600 lr0.007164016067791809 	 Loss Classification: 0.400965 Loss T 0.307499 Method MME
+
+S real T sketch Train Ep: 5700 lr0.0071297657409083726 	 Loss Classification: 0.485487 Loss T 0.270295 Method MME
+
+S real T sketch Train Ep: 5800 lr0.0070958950701490225 	 Loss Classification: 0.344664 Loss T 0.331613 Method MME
+
+S real T sketch Train Ep: 5900 lr0.007062397483947426 	 Loss Classification: 0.496234 Loss T 0.349282 Method MME
+
+S real T sketch Train Ep: 6000 lr0.007029266564879363 	 Loss Classification: 0.325953 Loss T 0.304382 Method MME
+
+
+Test set: Average loss: 2.8078, Accuracy: 149/352 F1 (42%)
+
+
+Test set: Average loss: 3.2134, Accuracy: 9365/23808 F1 (39%)
+
+best acc test 39.759745 best acc val 42.329545
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 6100 lr0.006996496045111504 	 Loss Classification: 0.487501 Loss T 0.356623 Method MME
+
+S real T sketch Train Ep: 6200 lr0.00696407980201184 	 Loss Classification: 0.634658 Loss T 0.381446 Method MME
+
+S real T sketch Train Ep: 6300 lr0.006932011853915101 	 Loss Classification: 0.587372 Loss T 0.301149 Method MME
+
+S real T sketch Train Ep: 6400 lr0.006900286356036734 	 Loss Classification: 0.444794 Loss T 0.294718 Method MME
+
+S real T sketch Train Ep: 6500 lr0.006868897596529406 	 Loss Classification: 0.403060 Loss T 0.358583 Method MME
+
+
+Test set: Average loss: 2.8619, Accuracy: 163/352 F1 (46%)
+
+
+Test set: Average loss: 3.1766, Accuracy: 9557/23808 F1 (40%)
+
+best acc test 39.759745 best acc val 46.306818
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 6600 lr0.006837839992676177 	 Loss Classification: 0.265194 Loss T 0.365520 Method MME
+
+S real T sketch Train Ep: 6700 lr0.006807108087214876 	 Loss Classification: 0.245842 Loss T 0.342432 Method MME
+
+S real T sketch Train Ep: 6800 lr0.006776696544788352 	 Loss Classification: 0.332785 Loss T 0.359908 Method MME
+
+S real T sketch Train Ep: 6900 lr0.006746600148515609 	 Loss Classification: 0.367820 Loss T 0.285660 Method MME
+
+S real T sketch Train Ep: 7000 lr0.006716813796678979 	 Loss Classification: 0.482500 Loss T 0.286312 Method MME
+
+
+Test set: Average loss: 2.9353, Accuracy: 147/352 F1 (41%)
+
+
+Test set: Average loss: 3.1834, Accuracy: 9685/23808 F1 (40%)
+
+best acc test 39.759745 best acc val 41.761364
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 7100 lr0.006687332499522798 	 Loss Classification: 0.564209 Loss T 0.300786 Method MME
+
+S real T sketch Train Ep: 7200 lr0.006658151376159165 	 Loss Classification: 0.424252 Loss T 0.328723 Method MME
+
+S real T sketch Train Ep: 7300 lr0.00662926565157663 	 Loss Classification: 0.418453 Loss T 0.250942 Method MME
+
+S real T sketch Train Ep: 7400 lr0.006600670653747793 	 Loss Classification: 0.321889 Loss T 0.330715 Method MME
+
+S real T sketch Train Ep: 7500 lr0.0065723618108320175 	 Loss Classification: 0.371102 Loss T 0.328226 Method MME
+
+
+Test set: Average loss: 2.8481, Accuracy: 156/352 F1 (44%)
+
+
+Test set: Average loss: 3.1990, Accuracy: 9603/23808 F1 (40%)
+
+best acc test 39.759745 best acc val 44.318182
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 7600 lr0.006544334648469591 	 Loss Classification: 0.471772 Loss T 0.322817 Method MME
+
+S real T sketch Train Ep: 7700 lr0.006516584787163857 	 Loss Classification: 0.494549 Loss T 0.302571 Method MME
+
+S real T sketch Train Ep: 7800 lr0.006489107939747966 	 Loss Classification: 0.619973 Loss T 0.315865 Method MME
+
+S real T sketch Train Ep: 7900 lr0.0064618999089330565 	 Loss Classification: 0.406723 Loss T 0.279065 Method MME
+
+S real T sketch Train Ep: 8000 lr0.006434956584934828 	 Loss Classification: 0.551489 Loss T 0.306072 Method MME
+
+
+Test set: Average loss: 2.8947, Accuracy: 154/352 F1 (43%)
+
+
+Test set: Average loss: 3.2333, Accuracy: 9609/23808 F1 (40%)
+
+best acc test 39.759745 best acc val 43.750000
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 8100 lr0.006408273943175546 	 Loss Classification: 0.284299 Loss T 0.263221 Method MME
+
+S real T sketch Train Ep: 8200 lr0.006381848042058713 	 Loss Classification: 0.377639 Loss T 0.333307 Method MME
+
+S real T sketch Train Ep: 8300 lr0.0063556750208137005 	 Loss Classification: 0.597666 Loss T 0.331898 Method MME
+
+S real T sketch Train Ep: 8400 lr0.006329751097407787 	 Loss Classification: 0.250458 Loss T 0.318793 Method MME
+
+S real T sketch Train Ep: 8500 lr0.0063040725665231365 	 Loss Classification: 0.329592 Loss T 0.289812 Method MME
+
+
+Test set: Average loss: 2.9578, Accuracy: 149/352 F1 (42%)
+
+
+Test set: Average loss: 3.2403, Accuracy: 9543/23808 F1 (40%)
+
+best acc test 39.759745 best acc val 42.329545
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 8600 lr0.006278635797596355 	 Loss Classification: 0.306095 Loss T 0.326573 Method MME
+
+S real T sketch Train Ep: 8700 lr0.006253437232918371 	 Loss Classification: 0.472094 Loss T 0.220376 Method MME
+
+S real T sketch Train Ep: 8800 lr0.0062284733857924735 	 Loss Classification: 0.290028 Loss T 0.281635 Method MME
+
+S real T sketch Train Ep: 8900 lr0.006203740838748417 	 Loss Classification: 0.232330 Loss T 0.329789 Method MME
+
+S real T sketch Train Ep: 9000 lr0.006179236241810624 	 Loss Classification: 0.350295 Loss T 0.323730 Method MME
+
+
+Test set: Average loss: 2.8571, Accuracy: 154/352 F1 (43%)
+
+
+Test set: Average loss: 3.2373, Accuracy: 9556/23808 F1 (40%)
+
+best acc test 39.759745 best acc val 43.750000
+record record/multi/MME/MME_net_alexnet_real_to_sketch_num_3
+S real T sketch Train Ep: 9100 lr0.006154956310818535 	 Loss Classification: 0.465927 Loss T 0.327304 Method MME
+
+S real T sketch Train Ep: 9200 lr0.0061308978257973165 	 Loss Classification: 0.258596 Loss T 0.249988 Method MME
+
+S real T sketch Train Ep: 9300 lr0.0061070576293771285 	 Loss Classification: 0.455243 Loss T 0.284242 Method MME
+
+S real T sketch Train Ep: 9400 lr0.006083432625259276 	 Loss Classification: 0.407000 Loss T 0.320019 Method MME
+
+S real T sketch Train Ep: 9500 lr0.006060019776727621 	 Loss Classification: 0.389187 Loss T 0.310976 Method MME
+
+
+Test set: Average loss: 2.8803, Accuracy: 154/352 F1 (43%)
+
+
+Test set: Average loss: 3.2592, Accuracy: 9534/23808 F1 (40%)
+

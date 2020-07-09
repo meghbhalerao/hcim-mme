@@ -18,4 +18,4 @@ module load python/anaconda/3
 module unload gcc
 module load gcc/5.2.0
 cd ..
-python eval.py --method MME --dataset multi --source real --target sketch --net resnet34 --dim 50
+python eval.py --method MME --dataset multi --source real --target sketch --net resnet34 --dim 300
