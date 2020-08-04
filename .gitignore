@@ -20,7 +20,8 @@ expts/
 
 # Some specific patterns
 *word2vec*
-
+.DS_Store
+*.py.*
 # Distribution / packaging
 .Python
 build/
