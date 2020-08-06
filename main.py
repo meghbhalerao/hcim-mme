@@ -72,6 +72,7 @@ def main():
     parser.add_argument('--mode', type=str, default='train', choices=['train', 'infer'], help = 'mode of script train or infer')
     # this argument is valid only if the mode is infer
     parser.add_argument('--model_path', type=str, help = 'path to the checkpoint of the model')
+    parser.add_argument('--uda', type=int, default = 0, help = 'unsupervised domain adaptation or not - 0 for ssda and 1 for uda')
 
     args = parser.parse_args()
     print('Dataset %s Source %s Target %s Labeled num perclass %s Network %s' %
@@ -164,6 +165,8 @@ def main():
     G.to(device)
     F1.to(device)
 
+    if args.uda == 1:
+        print("Using: Unsupervised domain adaptation")
 
     im_data_s = torch.FloatTensor(1)
     im_data_t = torch.FloatTensor(1)
@@ -262,8 +265,13 @@ def main():
                 im_data_tu.resize_(data_t_unl[0].size()).copy_(data_t_unl[0])
             
             zero_grad_all()
-            data = torch.cat((im_data_s, im_data_t), 0)
-            target = torch.cat((gt_labels_s, gt_labels_t), 0)
+            if args.uda == 1:
+                data = im_data_s
+                target = gt_labels_s
+            else:
+                data = torch.cat((im_data_s, im_data_t), 0)
+                target = torch.cat((gt_labels_s, gt_labels_t), 0)
+            #print(data.shape)
             output = G(data)
             out1 = F1(output)
             loss = criterion(out1, target)
@@ -306,8 +314,8 @@ def main():
                 loss_test, acc_test = test(target_loader_test)
                 G.train()
                 F1.train()
-                if acc_test >= best_acc:
-                    best_acc = acc_test
+                if acc_val >= best_acc:
+                    best_acc = acc_val
                     best_acc_test = acc_test
                     counter = 0
                 else:

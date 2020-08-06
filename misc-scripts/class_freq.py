@@ -58,14 +58,14 @@ xx = np.linspace(0, max(class_num_list), 10000)
 fig, ax = plt.subplots(figsize=(8,6))
 
 
-#ax.hist(np.array(class_num_list), density=False,bins = np.arange(0,max(class_num_list),50), edgecolor = "black", color = "peachpuff")
-#ax.plot(xx,kde(xx)*6285,color = "orange")
+ax.hist(np.array(class_num_list), density=False,bins = np.arange(0,max(class_num_list),50), edgecolor = "black", color = "peachpuff")
+ax.plot(xx,kde(xx)*6285, color = "orange")
 
-ax.hist(np.array(class_num_list), density=True,bins = np.arange(0,max(class_num_list),50))
-ax.plot(xx,kde(xx))
+#ax.hist(np.array(class_num_list), density=False,bins = np.arange(0,max(class_num_list),50))
+#ax.plot(xx,kde(xx))
 
 
-plt.xlabel("Number of Examples")
-plt.ylabel("Number of Classes")
-plt.title("\"%s\" Domain Distribution"%domain)
+plt.xlabel("Number of Examples", fontsize = 20)
+plt.ylabel("Number of Classes", fontsize = 20)
+plt.title("\"%s\" Domain Distribution"%domain, fontsize = 20)
 plt.show()
