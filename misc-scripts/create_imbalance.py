@@ -1,8 +1,9 @@
 import os
 
 dataset = "office"
-domain = "dslr"
-imbalance_type = "exp"
+domain = "amazon"
+imbalance_type = "step"
+imbalance_factor = 0.5
 
 if dataset == "office":
     data_path = "../data/%s/%s/images/"%(dataset,domain)
@@ -12,10 +13,11 @@ for class_ in os.listdir(data_path):
     num_examples.append(len(os.listdir(os.path.join(data_path,class_))))
 
 num_examples.sort(reverse = True)
-
+num_class = len(num_examples)
+total_examples = sum(num_examples)
 
 def get_img_num_per_cls(cls_num, imb_type, imb_factor):
-    img_max = len(data) / cls_num
+    img_max = total_examples / cls_num
     img_num_per_cls = []
     if imb_type == 'exp':
         for cls_idx in range(cls_num):
@@ -29,3 +31,15 @@ def get_img_num_per_cls(cls_num, imb_type, imb_factor):
     else:
         img_num_per_cls.extend([int(img_max)] * cls_num)
     return img_num_per_cls
+
+
+
+"""
+f = open("../data/txt/%s/labeled_source_images_%s.txt"%(dataset,domain),"r")
+i = 0
+for line in f:
+    i = i + 1
+print(i)
+"""
+
+imbalanced_class_list = get_img_num_per_cls(num_class, imbalance_type, imbalance_factor)
