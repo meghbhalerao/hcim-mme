@@ -63,7 +63,6 @@ def main():
     parser.add_argument('--loss',type=str, default='CE',choices=['CE', 'FL','CBFL'],
                         help='classifier loss function')
     parser.add_argument('--attribute', type = str, default = None,
-                        choices = ['word2vec','glove.6B.100d.txt','glove.6B.300d.txt','glove_anurag','fasttext_anurag','glove.840B.300d.txt','glove.twitter.27B.200d.txt', 'glove.twitter.27B.50d.txt' ,'glove.42B.300d.txt','glove.6B.200d.txt','glove.6B.50d.txt','glove.twitter.27B.100d.txt','glove.twitter.27B.25d.txt'],
                         help='semantic attribute feature vector to be used')
     parser.add_argument('--dim', type=int, default=300,
                         help='dimensionality of the feature vector - make sure this in sync with the dim of the semantic attribute vector')    

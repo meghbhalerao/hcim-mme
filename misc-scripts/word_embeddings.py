@@ -5,7 +5,7 @@ import numpy as np
 from scipy import spatial 
 
 # Setting which embedding and what dimension of the embedding we want
-dataset = "multi"
+dataset = "office"
 class_list = "lists/%s-class-list.txt"%dataset
 embed = 'glove'
 embed_model = 'glove.6B.50d.txt'
@@ -55,8 +55,9 @@ class_dict = {}
 for class_ in class_list:
     class_dict[class_] = class_.lower()
 # Handline some special cases here for words which are not present in the dict
-class_dict['bottlecap'] = 'bottle_cap'
-class_dict['teddy-bear'] = 'teddy_bear'
+if dataset == "multi":
+    class_dict['bottlecap'] = 'bottle_cap'
+    class_dict['teddy-bear'] = 'teddy_bear'
 
 
 num_class =  len(class_list)
@@ -68,6 +69,7 @@ print(len(embeddings_dict))
 for og_labels in class_dict.keys():
     if og_labels in embeddings_dict:
         total.append(embeddings_dict[og_labels]/np.linalg.norm(embeddings_dict[og_labels]))
+        print(og_labels)
         print("computed direct label")
     else:
         mini_labels=class_dict[og_labels].split('_')
@@ -75,6 +77,7 @@ for og_labels in class_dict.keys():
         final_embedding=np.sum([embeddings_dict[xlabel] for xlabel in mini_labels],axis=0)
         nearest_label=find_closest_embeddings(final_embedding)[0]
         total.append(embeddings_dict[nearest_label]/np.linalg.norm(embeddings_dict[nearest_label]))
+        print(nearest_labels)
         print("computed nearest neighbour")
     	
 np.save('%s_%s.npy'%(dataset,embed_model),total)

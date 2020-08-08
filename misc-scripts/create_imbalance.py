@@ -1,4 +1,5 @@
 import os
+import sys
 
 dataset = "office"
 domain = "amazon"
@@ -33,13 +34,27 @@ def get_img_num_per_cls(cls_num, imb_type, imb_factor):
     return img_num_per_cls
 
 
-
-"""
+# Counting the number of examples in the list
 f = open("../data/txt/%s/labeled_source_images_%s.txt"%(dataset,domain),"r")
 i = 0
 for line in f:
     i = i + 1
-print(i)
-"""
+
+if i == total_examples:
+    print("All good")
+else:
+    print("exiting program because of example mismatch")
+    sys.exit()
+
+path_mkdir = "../data/txt/%s_%s_%s"%(dataset,imbalance_type,str(imbalance_factor))
+if not os.path.exists(path_mkdir):
+    os.mkdir(path_mkdir)
 
 imbalanced_class_list = get_img_num_per_cls(num_class, imbalance_type, imbalance_factor)
+
+# Below is the program to 
+
+
+
+
+
