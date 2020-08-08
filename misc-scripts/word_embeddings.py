@@ -26,18 +26,15 @@ for item in my_file:
     class_list.append(found)
 
 del[class_list[len(class_list)-1]]
-
+print(class_list)
 # Loading the specific word embedding model
-if embed == 'w2v':
-    filename = '../../../model/%s-pret/%s'%(embed,embed_model)
+if embed == 'w2v' or embed == "fasttext":
+    filename = '../word_embedding_models/%s-pret/%s'%(embed,embed_model)
 elif embed == 'glove':
-    glove_input_file = '../../../model/%s-pret/%s'%(embed,embed_model)
+    glove_input_file = '../word_embedding_models/%s-pret/%s'%(embed,embed_model)
     word2vec_output_file = embed_model + '.word2vec'
     glove2word2vec(glove_input_file, word2vec_output_file)
     filename = word2vec_output_file 
-elif embed == 'fasttext':
-    filename = '../../../model/%s-pret/%s'%(embed,embed_model)    
-
 
 # Function for finding closest embedding vector if the label is not in the vocab
 def find_closest_embeddings(embedding):
@@ -77,7 +74,7 @@ for og_labels in class_dict.keys():
         final_embedding=np.sum([embeddings_dict[xlabel] for xlabel in mini_labels],axis=0)
         nearest_label=find_closest_embeddings(final_embedding)[0]
         total.append(embeddings_dict[nearest_label]/np.linalg.norm(embeddings_dict[nearest_label]))
-        print(nearest_labels)
+        print(nearest_label)
         print("computed nearest neighbour")
     	
 np.save('%s_%s.npy'%(dataset,embed_model),total)

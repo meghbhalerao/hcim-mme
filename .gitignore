@@ -18,6 +18,7 @@ semantics/glove/glove.6B.50d.txt
 attributes/
 expts/
 word_embedding_models/
+record/
 # Some specific patterns
 *word2vec*
 .DS_Store
