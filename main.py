@@ -62,6 +62,10 @@ def main():
                         help='early stopping on validation or not')
     parser.add_argument('--loss',type=str, default='CE',choices=['CE', 'FL','CBFL'],
                         help='classifier loss function')
+    parser.add_argument('--beta',type=float, default=0.99,required=False,
+                        help='beta value in CBFL loss')
+    parser.add_argument('--gamma',type=float, default=0.5,required=False,
+                        help='gamma value in CBFL or FL')
     parser.add_argument('--attribute', type = str, default = None,
                         help='semantic attribute feature vector to be used')
     parser.add_argument('--dim', type=int, default=300,
@@ -224,7 +228,7 @@ def main():
             criterion = FocalLoss(alpha = 1, gamma = 1).to(device)
         if args.loss == 'CBFL':
             # Calculating the list having the number of examples per class which is going to be used in the CB focal loss
-            beta = 0.99
+            beta = args.beta
             effective_num = 1.0 - np.power(beta, class_num_list)
             per_cls_weights = (1.0 - beta) / np.array(effective_num)
             per_cls_weights = per_cls_weights / np.sum(per_cls_weights) * len(class_num_list)
@@ -363,7 +367,7 @@ def main():
             criterion = FocalLoss(alpha = 1, gamma = 1).to(device)
         if args.loss == 'CBFL':
             # Calculating the list having the number of examples per class which is going to be used in the CB focal loss
-            beta = 0.99
+            beta = args.beta
             effective_num = 1.0 - np.power(beta, class_num_list)
             per_cls_weights = (1.0 - beta) / np.array(effective_num)
             per_cls_weights = per_cls_weights / np.sum(per_cls_weights) * len(class_num_list)
