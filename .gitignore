@@ -19,6 +19,7 @@ attributes/
 expts/
 word_embedding_models/
 record/
+previous_models/
 # Some specific patterns
 *word2vec*
 .DS_Store
