@@ -233,7 +233,7 @@ def main():
             per_cls_weights = (1.0 - beta) / np.array(effective_num)
             per_cls_weights = per_cls_weights / np.sum(per_cls_weights) * len(class_num_list)
             per_cls_weights = torch.FloatTensor(per_cls_weights).to(device)
-            criterion = CBFocalLoss(weight=per_cls_weights, gamma=0.5).to(device)
+            criterion = CBFocalLoss(weight=per_cls_weights, gamma=args.gamma).to(device)
      
         all_step = args.steps
         data_iter_s = iter(source_loader)
