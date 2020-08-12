@@ -229,7 +229,7 @@ def main():
         if args.loss == 'CE':
             criterion = nn.CrossEntropyLoss().to(device)
         if args.loss == 'FL':
-            criterion = FocalLoss(alpha = 1, gamma = 1).to(device)
+            criterion = FocalLoss(alpha = 1, gamma = args.gamma).to(device)
         if args.loss == 'CBFL':
             # Calculating the list having the number of examples per class which is going to be used in the CB focal loss
             beta = args.beta
@@ -368,7 +368,7 @@ def main():
         if args.loss == 'CE':
             criterion = nn.CrossEntropyLoss().to(device)
         if args.loss == 'FL':
-            criterion = FocalLoss(alpha = 1, gamma = 1).to(device)
+            criterion = FocalLoss(alpha = 1, gamma = args.gamma).to(device)
         if args.loss == 'CBFL':
             # Calculating the list having the number of examples per class which is going to be used in the CB focal loss
             beta = args.beta
