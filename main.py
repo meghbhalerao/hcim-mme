@@ -14,6 +14,8 @@ from utils.utils import weights_init, save_mymodel, save_checkpoint
 from utils.lr_schedule import inv_lr_scheduler
 from utils.return_dataset import return_dataset
 from utils.loss import entropy, adentropy, FocalLoss, CBFocalLoss
+import time
+from datetime import datetime
 
 def main():
     # Training settings
@@ -199,7 +201,9 @@ def main():
 
     if os.path.exists(args.checkpath) == False:
         os.mkdir(args.checkpath)
-
+    
+    time_stamp = datetime.now()
+    print(time_stamp)
 
     def train(class_dist_threshold_list):
         G.train()
@@ -347,7 +351,7 @@ def main():
                      'best_acc_test': best_acc_test,
                      'optimizer_g' : optimizer_g.state_dict(),
                      'optimizer_f' : optimizer_f.state_dict(),
-                     }, is_best)	
+                     }, is_best, time_stamp)	
 
     # defining the function for in training validation and testing
 
