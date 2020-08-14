@@ -24,6 +24,8 @@ for item in my_file:
 
 del[class_list[len(class_list)-1]] # the list of classes for the given dataset is made here
 
+
+
 data_path =  os.path.join("../data",dataset,domain)
 
 # List which stored number of examples per class
@@ -33,6 +35,13 @@ for class_ in class_list:
     num_class = len(os.listdir(os.path.join(data_path,class_)))
     class_num_list.append(num_class)
 
+#print(class_num_list)
+#print("Mean is: ", sum(class_num_list)/len(class_num_list))
+# Sorting the classes according to the number of samples
+s = [x for _,x in sorted(zip(class_num_list,class_list))]
+print(s)
+class_num_list.sort()
+print(class_num_list)
 
 kde = stats.gaussian_kde(np.array(class_num_list))
 xx = np.linspace(0, max(class_num_list), 10000)
