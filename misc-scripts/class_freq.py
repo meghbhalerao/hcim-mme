@@ -33,25 +33,6 @@ for class_ in class_list:
     num_class = len(os.listdir(os.path.join(data_path,class_)))
     class_num_list.append(num_class)
 
-"""
-fig, ax = plt.subplots(1,1)
-ax = sns.distplot(class_num_list, hist=True, kde=True, 
-             bins=25, color = 'darkblue', 
-             hist_kws={'edgecolor':'black'},
-             kde_kws={'linewidth': 4}, norm_hist = True)
-
-# find the line and rescale y-values
-children = ax.get_children()
-for child in children:
-    if isinstance(child, matplotlib.lines.Line2D):
-        x, y = child.get_data()
-        y *= len(class_num_list)
-        child.set_data(x,y)
-
-# update y-limits (not done automatically)
-ax.set_ylim(y.min(), y.max())
-fig.canvas.draw()
-"""
 
 kde = stats.gaussian_kde(np.array(class_num_list))
 xx = np.linspace(0, max(class_num_list), 10000)

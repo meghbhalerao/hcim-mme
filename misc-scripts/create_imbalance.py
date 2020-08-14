@@ -1,7 +1,7 @@
 import os
 import sys
 
-dataset = "office"
+dataset = "multi"
 domain = "amazon"
 imbalance_type = "step"
 imbalance_factor = 0.5
