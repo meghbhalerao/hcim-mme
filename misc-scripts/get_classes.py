@@ -9,7 +9,7 @@ from scipy import stats
 dataset = "multi"
 domain_list = ["real","sketch","clipart","painting"]
 class_and_num_list_sorted = []
-threshold = 100
+threshold = 104
 master_list = []
 
 for domain in domain_list:
@@ -54,12 +54,15 @@ for item in master_list:
 
 u = set.intersection(set_list[0],set_list[1],set_list[2],set_list[3])
 u = list(u)
+print(u)
+print(len(u))
 
+"""
 with open('lists/class_list.txt', 'w') as f:
     for item in u:
         f.write("%s\n" % item)
 
-
+"""
 
 
 

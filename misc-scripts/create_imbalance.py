@@ -2,9 +2,9 @@ import os
 import sys
 
 dataset = "multi"
-domain = "amazon"
+domain = "real"
 imbalance_type = "step"
-imbalance_factor = 0.5
+imbalance_factor = 0.1
 
 if dataset == "office":
     data_path = "../data/%s/%s/images/"%(dataset,domain)
