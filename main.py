@@ -53,7 +53,6 @@ def main():
     parser.add_argument('--target', type=str, default='sketch',
                         help='target domain')
     parser.add_argument('--dataset', type=str, default='multi',
-                        choices=['multi', 'office', 'office_home'],
                         help='the name of dataset')
     parser.add_argument('--num', type=int, default=3,
                         help='number of labeled examples in the target')
