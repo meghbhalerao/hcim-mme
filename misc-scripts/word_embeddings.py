@@ -5,8 +5,9 @@ import numpy as np
 from scipy import spatial 
 
 # Setting which embedding and what dimension of the embedding we want
-dataset = "office"
-class_list = "lists/%s-class-list.txt"%dataset
+dataset = "multi"
+#class_list = "lists/%s-class-list.txt"%dataset
+class_list = "lists/multi_balanced_class_list.txt"
 embed = 'glove'
 embed_model = 'glove.6B.50d.txt'
 binary = False
@@ -14,17 +15,17 @@ dim = 50
 
 # Making the list of classes
 f = open(class_list)
-my_file = f.read().split("\n")
+class_list = f.read().split("\n")
 f.close()
-class_list = []
-
+#class_list = []
+"""
 for item in my_file:
     item = str(item)
     m = re.search('/(.+?)/',item)
     if m:
         found = m.group(1)
     class_list.append(found)
-
+"""
 del[class_list[len(class_list)-1]]
 print(class_list)
 # Loading the specific word embedding model

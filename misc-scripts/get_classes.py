@@ -7,9 +7,10 @@ import seaborn as sns
 from scipy import stats
 
 dataset = "multi"
-domain_list = ["real","sketch","clipart","painting"]
+#domain_list = ["real","sketch","clipart","painting"]
+domain_list = ["painting"]
 class_and_num_list_sorted = []
-threshold = 104
+threshold = 300
 master_list = []
 
 for domain in domain_list:
@@ -44,7 +45,9 @@ for domain in domain_list:
     non_zero = non_zero[0]
     class_list = [class_list[i] for i in non_zero]
     master_list.append(class_list)
- 
+
+class_list.sort()
+print(len(class_list))
 #list3 = list(set(master_list[0]) & set(master_list[1]))
 # Convert list to set
 set_list = []
@@ -52,10 +55,11 @@ for item in master_list:
     item = set(item)
     set_list.append(item)
 
-u = set.intersection(set_list[0],set_list[1],set_list[2],set_list[3])
-u = list(u)
-print(u)
-print(len(u))
+#u = set.intersection(set_list[0],set_list[1],set_list[2],set_list[3])
+#u = set.intersection(set_list[0],set_list[1])
+#u = list(u)
+#print(u)
+#print(len(u))
 
 """
 with open('lists/class_list.txt', 'w') as f:

@@ -69,7 +69,7 @@ def main():
                         help='gamma value in CBFL or FL')
     parser.add_argument('--attribute', type = str, default = None,
                         help='semantic attribute feature vector to be used')
-    parser.add_argument('--dim', type=int, default=300,
+    parser.add_argument('--dim', type=int, default=50,
                         help='dimensionality of the feature vector - make sure this in sync with the dim of the semantic attribute vector')    
     parser.add_argument('--deep', type=int, default=0,
                         help='type of classification predictor - 0 for shallow, 1 for deep')
@@ -145,7 +145,8 @@ def main():
     weights_init(F1)
 	# Setting the prediction layer weights as the semantic attributes
     if args.attribute is not None:
-        att = np.load('attributes/%s_%s.npy'%(args.dataset,args.attribute))    
+        att = np.load('attributes/%s_%s.npy'%(args.dataset,args.attribute))   
+        #att = np.load('attributes/multi_%s.npy'%(args.attribute)) 
         if use_gpu:
             att = nn.Parameter(torch.cuda.FloatTensor(att))
         else:
