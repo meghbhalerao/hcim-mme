@@ -69,6 +69,45 @@ def adentropy(F1, feat, lamda, weight_list = None, class_dist_threshold_list = N
                                               (torch.log(out_t1 + 1e-5)), 1))
     return loss_adent
 
+def calc_coeff(iter_num, high=1.0, low=0.0, alpha=10.0, max_iter=10000.0):
+    return np.float(2.0 * (high - low) /
+                    (1.0 + np.exp(-alpha * iter_num / max_iter)) -
+                    (high - low) + low)
+
+# Weighted entropies
+
+def weighted_adentropy_aux(F1, feat, lamda, weights,  eta=1.0):
+    out_t1 = F1(feat, reverse=True, eta=eta)
+    out_t1 = F.softmax(out_t1)
+    loss_adent = lamda * torch.mean(weights*torch.sum(out_t1 * (torch.log(out_t1 + 1e-5)), 1))
+    return loss_adent
+
+def weighted_adentropy(F1, feat, lamda, paths, weights_to_paths):
+    weight=[]
+    for path in paths:
+        weight.append(float(weights_to_paths[path]))
+    weights = torch.Tensor(weight).cuda()
+    return weighted_adentropy_aux(F1,feat, lamda, weights)
+
+
+def weighted_entropy_aux(F1, feat, lamda, weights,  eta=-1.0):
+    out_t1 = F1(feat, reverse=True, eta=-eta)
+    out_t1 = F.softmax(out_t1)
+    loss_adent = -lamda * torch.mean(weights*torch.sum(out_t1 * (torch.log(out_t1 + 1e-5)), 1))
+    return loss_adent
+
+def weighted_entropy(F1, feat, lamda, paths, weights_to_paths):
+    weight=[]
+    for path in paths:
+        weight.append(float(weights_to_paths[path]))
+    weights = torch.Tensor(weight).cuda()
+    return weighted_entropy_aux(F1,feat, lamda, weights)
+
+
+
+
+
+
 
 class FocalLoss(nn.Module):
     def __init__(self, alpha=1, gamma=2):

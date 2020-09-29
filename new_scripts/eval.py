@@ -68,7 +68,6 @@ def eval_source(G,F1, args, running_weights, tolerance):
         top_sorted_paths=sorted_paths[:-3] # take closest 3
         for top_sorted_path in top_sorted_paths:
             global_weights[top_sorted_path]+=1.2/float(tolerance)
-
     return global_weights
 
 def transfer_source_weights_beta(args, step=0, G=None, F1=None, weight_file=None):

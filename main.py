@@ -14,6 +14,7 @@ from utils.utils import weights_init, save_mymodel, save_checkpoint
 from utils.lr_schedule import inv_lr_scheduler
 from utils.return_dataset import return_dataset
 from utils.loss import entropy, adentropy, FocalLoss, CBFocalLoss
+from utils.custom_loss import regularizer
 import time
 from datetime import datetime
 
@@ -46,7 +47,7 @@ def main():
                             'training status')
     parser.add_argument('--save_interval', type=int, default=500, metavar='N',
                         help='how many batches to wait before saving a model')
-    parser.add_argument('--net', type=str, default='alexnet',
+    parser.add_argument('--net', type=str, default='al  exnet',
                         help='which network to use')
     parser.add_argument('--source', type=str, default='real',
                         help='source domain')
@@ -67,12 +68,12 @@ def main():
                         help='beta value in CBFL loss')
     parser.add_argument('--gamma',type=float, default=0.5,required=False,
                         help='gamma value in CBFL or FL')
+    parser.add_argument('--reg',type=float, default=0.1,required=False,
+                        help='weight of semantic regularizer')
     parser.add_argument('--attribute', type = str, default = None,
                         help='semantic attribute feature vector to be used')
     parser.add_argument('--dim', type=int, default=50,
-                        help='dimensionality of the feature vector - make sure this in sync with the dim of the semantic attribute vector')    
-    parser.add_argument('--deep', type=int, default=0,
-                        help='type of classification predictor - 0 for shallow, 1 for deep')
+                        help='dimensionality of the feature vector - make sure this in sync with the dim of the semantic attribute vector')
     parser.add_argument('--mode', type=str, default='train', choices=['train', 'infer'], help = 'mode of script train or infer')
     # this argument is valid only if the mode is infer
     parser.add_argument('--model_path', type=str, help = 'path to the checkpoint of the model')
@@ -126,14 +127,14 @@ def main():
 
     # Setting the predictor layer
     if args.attribute is not None:
-        if args.deep:
+        if args.net == 'resnet34':
             F1 = Predictor_deep_attributes(num_class=len(class_list),inc=inc,feat_dim = args.dim)
             print("Using: Predictor_deep_attributes")
         else:
             F1 = Predictor_attributes(num_class=len(class_list),inc=inc,feat_dim = args.dim)
             print("Using: Predictor_attributes")
     else:
-        if args.deep:
+        if args.net == 'resnet34':
             F1 = Predictor_deep(num_class=len(class_list),inc=inc)
             print("Using: Predictor_deep")
         else:
@@ -151,7 +152,7 @@ def main():
             att = nn.Parameter(torch.cuda.FloatTensor(att))
         else:
             att = nn.Parameter(torch.FloatTensor(att,device = "cpu"))
-        if args.deep:
+        if args.net == 'resnet34':
             F1.fc3.weight = att
         else:
             F1.fc2.weight = att
@@ -222,8 +223,6 @@ def main():
         param_lr_f = []
         for param_group in optimizer_f.param_groups:
             param_lr_f.append(param_group["lr"])
-
-
        
         # Setting the loss function to be used for the classification loss
         if args.loss == 'CE':
@@ -248,6 +247,15 @@ def main():
         len_train_target_semi = len(target_loader_unl)
         best_acc = 0
         counter = 0
+
+        """
+        x = torch.load("./freezed_models/alexnet_p2r.ckpt.best.pth.tar")
+        G.load_state_dict(x['G_state_dict'])
+        F1.load_state_dict(x['F1_state_dict'])
+        optimizer_f.load_state_dict(x['optimizer_f'])
+        optimizer_g.load_state_dict(x['optimizer_g'])
+        """
+        reg_weight = args.reg
         for step in range(all_step):
             optimizer_g = inv_lr_scheduler(param_lr_g, optimizer_g, step,
                                         init_lr=args.lr)
@@ -281,7 +289,22 @@ def main():
             #print(data.shape)
             output = G(data)
             out1 = F1(output)
-            loss = criterion(out1, target)
+            if args.attribute is not None:
+                if args.net == 'resnet34':
+                    reg_loss = regularizer(F1.fc3.weight,att)
+                    loss = criterion(out1, target) + reg_weight * reg_loss
+                else:
+                    reg_loss = regularizer(F1.fc2.weight,att)
+                    loss = criterion(out1, target) + reg_weight * reg_loss
+            else:
+                reg_loss = torch.tensor(0)
+                loss = criterion(out1, target)
+
+            if args.attribute is not None:
+                if step%args.save_interval == 0 and step!=0:
+                    reg_weight = 0.5 * reg_weight
+                    print("Reduced Reg weight to: ", reg_weight)
+
             loss.backward(retain_graph=True)
             optimizer_g.step()
             optimizer_f.step()
@@ -290,6 +313,7 @@ def main():
                 output = G(im_data_tu)
                 if args.method == 'ENT':
                     loss_t = entropy(F1, output, args.lamda)
+                    #print(loss_t.cpu().data.item())
                     loss_t.backward()
                     optimizer_f.step()
                     optimizer_g.step()
@@ -301,15 +325,15 @@ def main():
                 else:
                     raise ValueError('Method cannot be recognized.')
                 log_train = 'S {} T {} Train Ep: {} lr{} \t ' \
-                            'Loss Classification: {:.6f} Loss T {:.6f} ' \
+                            'Loss Classification: {:.6f} Reg: {:.6f} Loss T {:.6f} ' \
                             'Method {}\n'.format(args.source, args.target,
-                                                step, lr, loss.data,
+                                                step, lr, loss.data, reg_weight*reg_loss.data,
                                                 -loss_t.data, args.method)
             else:
                 log_train = 'S {} T {} Train Ep: {} lr{} \t ' \
-                            'Loss Classification: {:.6f} Method {}\n'.\
+                            'Loss Classification: {:.6f} Reg: {:.6f} Method {}\n'.\
                     format(args.source, args.target,
-                        step, lr, loss.data,
+                        step, lr, loss.data, reg_weight * reg_loss.data,
                         args.method)
             G.zero_grad()
             F1.zero_grad()

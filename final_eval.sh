@@ -1,7 +1,7 @@
 ######START OF EMBEDDED SGE COMMANDS ##########################
 #$ -S /bin/bash
 #$ -cwd
-#$ -N r2p_1
+#$ -N r2p_1_eval_exp1
 #$ -M 16ee234.megh@nitk.edu.in #### email to nofity with following options/scenarios
 #$ -m a #### send mail in case the job is aborted
 #$ -m b #### send mail when job begins
@@ -17,5 +17,4 @@ module load pytorch/1.0.1
 module load python/anaconda/3
 module unload gcc
 module load gcc/5.2.0
-cd ..
-python main.py --method MME --num 1 --dataset multi --source real --target painting --patience 15 --net alexnet --loss CE --save_check 
+python final_eval.py --method MME --dataset multi --source real --target painting --net alexnet

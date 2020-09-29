@@ -8,9 +8,9 @@ def upper_triangle(matrix):
     upper = torch.triu(matrix, diagonal=1)
     return upper
 
-def regularizer(W):
+def regularizer(W,embedding):
     W = F.normalize(W, dim=1)
-    embedding = torch.from_numpy(np.load('semantics/glove/glove_features.npy')).cuda()
+    #embedding = torch.from_numpy(np.load('semantics/glove/glove_features.npy')).cuda()
     mc = W.shape[0]
     w_expand1 = W.unsqueeze(0)
     w_expand2 = W.unsqueeze(1)

@@ -7,7 +7,7 @@ from scipy import spatial
 # Setting which embedding and what dimension of the embedding we want
 dataset = "multi"
 #class_list = "lists/%s-class-list.txt"%dataset
-class_list = "lists/multi_balanced_class_list.txt"
+class_list = "lists/multi-class.txt"
 embed = 'glove'
 embed_model = 'glove.6B.50d.txt'
 binary = False
@@ -17,17 +17,8 @@ dim = 50
 f = open(class_list)
 class_list = f.read().split("\n")
 f.close()
-#class_list = []
-"""
-for item in my_file:
-    item = str(item)
-    m = re.search('/(.+?)/',item)
-    if m:
-        found = m.group(1)
-    class_list.append(found)
-"""
 del[class_list[len(class_list)-1]]
-print(class_list)
+print(len(class_list))
 # Loading the specific word embedding model
 if embed == 'w2v' or embed == "fasttext":
     filename = '../word_embedding_models/%s-pret/%s'%(embed,embed_model)

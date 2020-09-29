@@ -73,7 +73,7 @@ class VGGBase(nn.Module):
         return x
 	
 class Predictor_deep_attributes(nn.Module):
-    def __init__(self, num_class=64, inc=4096, temp=0.05, feat_dim = 300):
+    def __init__(self, num_class=64, inc=4096, temp=0.05, feat_dim = 50):
         super(Predictor_deep_attributes, self).__init__()
         self.fc1 = nn.Linear(inc, 512)
         self.fc2 = nn.Linear(512, feat_dim)
@@ -92,6 +92,28 @@ class Predictor_deep_attributes(nn.Module):
         x_out = self.fc3(x)/self.temp
         return x_out
 
+
+class Predictor_deep_2(nn.Module):
+    def __init__(self, num_class=64, inc=4096, temp=0.05, feat_dim = 50):
+        super(Predictor_deep_2, self).__init__()
+        self.fc1 = nn.Linear(inc, 512)
+        self.extrafc = nn.Linear(512,feat_dim)
+        self.fc2 = nn.Linear(feat_dim, num_class, bias=False)
+        #self.fc2.weight = torch.nn.Parameter(torch.from_numpy(np.load('semantics/glove/glove_features.npy')))
+        self.num_class = num_class
+        self.temp = temp
+
+    def forward(self, x, reverse=False, eta=0.1):
+        x = self.fc1(x)
+        x = self.extrafc(x)
+        if reverse:
+            x = grad_reverse(x, eta)
+        x = F.normalize(x)
+        x_out = self.fc2(x) / self.temp
+        return x_out
+
+
+
 class Predictor_deep(nn.Module):
     def __init__(self, num_class=64, inc=4096, temp=0.05):
         super(Predictor_deep, self).__init__()
@@ -107,7 +129,7 @@ class Predictor_deep(nn.Module):
         x = F.normalize(x)
         x_out = self.fc2(x) / self.temp
         return x_out
-
+    
 class Discriminator(nn.Module):
     def __init__(self, inc=4096):
         super(Discriminator, self).__init__()
@@ -139,7 +161,7 @@ class Predictor(nn.Module):
         return x_out
 
 class Predictor_attributes(nn.Module):
-    def __init__(self, num_class=64, inc=4096, temp=0.05, feat_dim = 300):
+    def __init__(self, num_class=64, inc=4096, temp=0.05, feat_dim = 50):
         super(Predictor_attributes, self).__init__()
         self.fc1 = nn.Linear(inc, feat_dim)
         self.fc2 = nn.Linear(feat_dim,num_class, bias = False)
