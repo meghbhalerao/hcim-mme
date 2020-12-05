@@ -31,5 +31,10 @@ python main.py
 To run the second stage of training _i.e._, **target reweighting**, please run `python main_stagetwo.py --pretrained /path/to/model_ckpt`, by passing the saved checkpoint from stage 1 as the parameter. 
 ### Miscelleneous
 To plot **t-SNE** plots of the feature representations please navigate to the `./tsne` folder.
+## Dependencies
+- [`pytorch`](https://pytorch.org)
+- [`scikit-learn`](https://scikit-learn.org/stable/)
+- [`tsne-cuda`](https://github.com/CannyLab/tsne-cuda)
+
 ## References
 1. [Semi-Supervised Domain Adaptation vie Minimax Entropy](https://arxiv.org/abs/1904.06487). _Kuniaki Saito, Donghyun Kim, Stan Sclaroff, Trevor Darrell, Kate Saenko. ICCV 2019._
